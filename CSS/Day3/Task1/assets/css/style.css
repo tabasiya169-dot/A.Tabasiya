@@ -1,0 +1,29 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: lightgray;
+}
+
+
+h2{
+    color: darkblue;
+    margin-bottom: 15vh;
+}
+
+p{
+    color: black;
+    margin: 10px;
+}
+
+
+.card{
+    background-color: lightblue;
+    width: 100vh;
+    height: 20vh;
+    text-align: center;
+}

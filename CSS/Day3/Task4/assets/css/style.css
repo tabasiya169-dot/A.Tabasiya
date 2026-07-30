@@ -1,0 +1,23 @@
+
+*{
+    margin: 1vh;
+    padding: 2vh;
+    box-sizing: border-box;
+}
+
+
+.movie{
+    width: 80vh;
+    height: 30vh;
+    background-color:orange;
+    margin: 15px auto;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+h2, p, span{
+    color: darkblue;
+    margin:1vh;
+}

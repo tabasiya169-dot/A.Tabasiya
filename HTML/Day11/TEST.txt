@@ -1,0 +1,33 @@
+TEST
+
+1. What is HTML Media?
+Media refers to multimedia content like images, video, audio, maps, and embedded webpages.
+
+2. What is the purpose of the source tag?
+The <source> tag provides multiple media files for browsers to choose from.
+
+3. What is poster in video?
+Poster displays an image before the video starts playing.
+
+4. Difference between audio and video?
+Audio plays sound only.
+
+Video plays both audio and visuals.
+
+5. What is iframe?
+The <iframe> tag is used to embed another webpage, video, map, or document inside the current webpage.
+
+6.How do you embed a YouTube video?
+Open YouTube -> Share -> Embed-> Copy the iframe code and paste it into your HTML page.
+
+7. How do you embed Google Maps?
+Open Google Maps -> Share -> Embed a Map -> Copy the iframe code and paste it into your HTML page.
+
+8. Name five HTML Media Elements?
+
+ img
+ audio
+ video
+ iframe
+ source
+

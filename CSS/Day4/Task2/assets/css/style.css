@@ -1,0 +1,27 @@
+body{
+    background-color:lightgrey;
+    font-family:Arial, sans-serif;
+}
+
+.product-card{
+    width:100vh;
+    height:50vh;
+    background-color:white;
+    border:2vh solid green;
+    padding:2vh;
+    margin:1vh auto;
+    text-align:center;
+}
+
+.product-card img{
+    width:100vh;
+    height:25vh;
+}
+
+button{
+    padding:2vh;
+    background-color:green;
+    color:white;
+    border:none;
+    cursor:pointer;
+}

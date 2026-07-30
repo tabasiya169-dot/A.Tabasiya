@@ -1,0 +1,20 @@
+body{
+    background-color:lightgreen;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.card{
+    width:60vh;
+    height:40vh;
+    background-color:lightblue;
+    border:3vh solid blue;
+    padding:2vh;
+    margin:5vh auto;
+    text-align:center;
+}
+
+.card img{
+    width:50vh;
+    height:20vh;
+    border-radius:50%;
+}

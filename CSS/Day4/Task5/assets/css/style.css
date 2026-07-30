@@ -1,0 +1,33 @@
+body{
+    font-family: Arial, sans-serif;
+}
+
+.box1{
+    width:100vh;
+    height:20vh;
+    background-color:lightblue;
+    text-align:center;
+}
+
+.box2{
+    width:100vh;
+    height:20vh; 
+    background-color:lightgreen;
+    text-align:center;
+   
+}
+
+.box3{
+    width:100vh;
+    height:20vh;
+    background-color:lightyellow;
+    text-align:center;
+  
+}
+
+.box4{
+    width:100vh;
+    height:20vh;
+    background-color:lightpink;
+    text-align:center;
+}

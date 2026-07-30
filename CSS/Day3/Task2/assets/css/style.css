@@ -1,0 +1,23 @@
+
+body{
+    background-color: lightgray;
+}
+
+#company{
+    background-color: lightblue;
+    width: 80vh;
+    height: 20vh;
+    margin: 0;
+    padding:0;
+    text-align: center;
+}
+
+
+.name{
+    color: darkblue;
+}
+
+p{
+    color: brown;
+    font-size: large;
+}

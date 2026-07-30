@@ -1,0 +1,20 @@
+body{
+    background-color:#e2dada;
+    font-family:Arial, sans-serif;
+}
+
+.id-card{
+    width:100vh;
+    height:100vh;
+    padding:2vh;
+    margin:1vh auto;
+    border:2vh solid navy;
+    border-radius:15x;
+    background-color:lightyellow;
+    text-align:center;
+}
+
+.id-card img{
+    width:80vh;
+    height:70vh;
+}

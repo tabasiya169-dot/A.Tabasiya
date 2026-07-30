@@ -1,0 +1,63 @@
+1. What is block level element?
+
+Ans: A block level element is start with new line and occupies the full width available.
+
+2. Name five block level elements?
+
+Ans: h1
+     p
+     div
+     section 
+     article
+
+3. What is an Inline element?
+
+Ans: Inline element does not start with a new line and occupies only the required width.
+
+4. Name five Inline elements?
+
+Ans: span
+     img
+     a
+     strong
+     em
+
+5. Difference Between Block and Inline elements?
+
+Ans: Block -> New line -> Full width
+     Inline -> Same line + Required width.
+
+6. What is the difference between b and strong?
+
+Ans: b -> Visual bold
+     strong -> important text + sementic meaning
+
+7. What is difference between I and em?
+
+Ans: I -> Italic text
+     em ->Emphasized text with meaning
+
+8. What is the purpose of mark tag?
+
+ Ans: Used for highlight the text.
+
+9. What is the interactive element?
+
+Ans: Elements that allow users to interactive with a webpage.
+
+10. Name five interactive elements.
+
+Ans: a
+     input
+     button
+     select
+     textarea
+
+
+
+      
+
+
+
+
+

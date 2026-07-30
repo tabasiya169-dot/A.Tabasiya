@@ -1,0 +1,26 @@
+
+h2, p, span{
+    margin: 2vh;
+    text-align: center;
+}
+
+
+.zoho{
+    color: blue;
+}
+
+.freshworks{
+    color: green;
+}
+
+.aspire{
+    color: purple;
+}
+
+.cts{
+    color: orange;
+}
+
+.tcs{
+    color: red;
+}

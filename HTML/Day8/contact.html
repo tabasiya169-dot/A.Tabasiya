@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Support Contact Form</title>
+</head>
+<body>
+    <center>
+
+<h2>Customer Support Contact Form</h2>
+
+<form>
+
+<label for="fullname">Full Name:</label><br>
+<input type="text" id="fullname"
+placeholder="Enter your full name"
+minlength="3" maxlength="30" required>
+<br><br>
+
+<label for="email">Email Address:</label><br>
+<input type="email" id="email"
+placeholder="Enter your email address" required>
+<br><br>
+
+<label for="mobile">Mobile Number:</label><br>
+<input type="tel" id="mobile"
+placeholder="Enter your mobile number">
+<br><br>
+
+<label>Department:</label><br>
+<select>
+    <option>Customer Support</option>
+    <option>Technical Team</option>
+    <option>Sales Team</option>
+    <option>Accounts</option>
+</select>
+<br><br>
+
+<label>Priority Level:</label><br>
+<input type="radio" name="priority"> High
+<input type="radio" name="priority"> Medium
+<input type="radio" name="priority"> Low
+<br><br>
+
+<label>Preferred Contact Time:</label><br>
+<input type="time">
+<br><br>
+
+<label>Attachment:</label><br>
+<input type="file">
+<br><br>
+
+<label>Website (Optional):</label><br>
+<input type="url"
+placeholder="https://example.com">
+<br><br>
+
+<label>Issue Description:</label><br>
+<textarea rows="5" cols="30"
+placeholder="Describe your issue here"></textarea>
+<br><br>
+
+<button type="submit">Send Request</button>
+
+<button type="reset">Clear Form</button>
+
+</form>
+</center>
+
+</body>
+
+</html>

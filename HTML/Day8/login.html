@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+</head>
+<body>
+    <center>
+
+    <h2>User Login Form</h2>
+
+    <form>
+
+        <label for="username">Username:</label><br>
+        <input type="text" id="username"
+        placeholder="Enter your username"
+        minlength="4" maxlength="15" required>
+        <br><br>
+
+        <label for="email">Email ID:</label><br>
+        <input type="email" id="email"placeholder="Enter your email" required>
+        <br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password"placeholder="Enter your password"
+        minlength="6" maxlength="12" required>
+        <br><br>
+
+        <label for="mobile">Mobile Number:</label><br>
+        <input type="tel" id="mobile"placeholder="Enter your mobile number">
+        <br><br>
+
+        <label>Select User Type:</label><br>
+        <select>
+            <option>Student</option>
+            <option>Employee</option>
+            <option>Admin</option>
+        </select>
+        <br><br>
+
+        <label>Remember Me:</label><br>
+        <input type="checkbox"> Keep me logged in
+        <br><br>
+
+        <label for="message">Login Message:</label><br>
+        <textarea id="message"
+        rows="4" cols="30"
+        placeholder="Enter any message"></textarea>
+        <br><br>
+
+        <button type="submit">Login</button>
+
+        <button type="reset">Clear</button>
+
+        <button type="button">Register</button>
+
+    </form>
+    </center>
+
+</body>
+</html>

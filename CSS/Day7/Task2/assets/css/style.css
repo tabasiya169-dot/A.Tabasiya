@@ -1,0 +1,22 @@
+body{
+    margin:0;
+    font-family:Arial;
+}
+
+nav{
+    position:sticky;
+    top:0;
+    background:black;
+    padding:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:20px;
+}
+
+.content{
+    height:1500px;
+    padding:20px;
+}

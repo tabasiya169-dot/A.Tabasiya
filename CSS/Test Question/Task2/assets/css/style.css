@@ -1,0 +1,21 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    text-align:center;
+    padding:20px;
+}
+
+.card{
+    width:180px;
+    height:150px;
+    padding:20px;
+    margin:10px;
+    border:2px solid black;
+    border-radius:10px;
+    background-color:lightblue;
+    display:inline-block;
+}

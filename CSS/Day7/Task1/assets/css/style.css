@@ -1,0 +1,14 @@
+body{
+    font-family: Arial;
+    height:1500px;
+}
+
+.chat{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:green;
+    color:white;
+    padding:15px 20px;
+    border-radius:30px;
+}

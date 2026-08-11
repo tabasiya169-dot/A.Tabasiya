@@ -1,0 +1,17 @@
+.box1,.box2,.box3{
+    width:120px;
+    height:120px;
+    background:skyblue;
+    border:2px solid black;
+    margin:10px;
+    text-align:center;
+    line-height:120px;
+}
+
+.box2{
+    display:none;
+}
+
+.box3{
+    visibility:hidden;
+}

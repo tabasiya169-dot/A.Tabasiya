@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Arial;
+    padding: 30px;
+}
+
+form{
+    width: 300px;
+    margin: auto;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid gray;
+}
+
+input:focus{
+    border-color: blue;
+    background: lightyellow;
+    outline: none;
+}

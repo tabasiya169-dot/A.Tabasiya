@@ -1,0 +1,28 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background-color:steelblue;
+    padding:15px 30px;
+}
+
+.menu{
+    display:flex;
+    list-style:none;
+}
+
+.menu li{
+    margin-left:20px;
+}
+
+.menu li a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+}

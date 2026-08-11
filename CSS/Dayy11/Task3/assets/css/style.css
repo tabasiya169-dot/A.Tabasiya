@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.employee-card {
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+.employee-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+
+    .employee-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .employee-card {
+        width: 90%;
+    }
+}

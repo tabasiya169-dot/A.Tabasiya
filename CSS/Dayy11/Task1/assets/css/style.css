@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.student-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.student-card {
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+.student-card img {
+    width: 130px;
+    height: 110px;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+
+    .student-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .student-card {
+        width: 90%;
+    }
+}

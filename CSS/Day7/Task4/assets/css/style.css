@@ -1,0 +1,23 @@
+.box{
+    width:150px;
+    height:100px;
+    margin:20px;
+    color:white;
+    text-align:center;
+    line-height:100px;
+}
+
+.box1{
+    background:red;
+}
+
+.box2{
+    background:blue;
+    position:relative;
+    top:40px;
+    left:60px;
+}
+
+.box3{
+    background:green;
+}

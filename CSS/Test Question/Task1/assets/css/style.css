@@ -1,0 +1,29 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+#container{
+    width:80%;
+    margin:20px auto;
+}
+
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:steelblue;
+    color:white;
+    padding:20px;
+}
+
+.card{
+    display:block;
+    border:2px solid black;
+    margin-top:20px;
+    padding:20px;
+    background:lightgoldenrodyellow;
+}

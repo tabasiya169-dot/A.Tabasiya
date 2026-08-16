@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Odyssey — Understand AI. Explore the Future.</title>
+  <meta name="description" content="AI Odyssey is a modern, editorial AI learning platform for beginners. Explore how artificial intelligence works through simple articles, visual pipelines, and structured learning paths.">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: {
+              50: '#FCFAF7',
+              100: '#FAF8F5',
+              200: '#F4EFEA',
+              300: '#EFE8DE',
+              400: '#E5DDCF',
+            },
+            charcoal: {
+              900: '#111418',
+              800: '#181A1B',
+              700: '#2A2E31',
+              600: '#4A5056',
+              500: '#6E767E',
+            },
+            teal: {
+              accent: '#0D9488',
+              hover: '#0F766E',
+              light: '#CCFBF1',
+            },
+            emerald: {
+              accent: '#059669',
+              light: '#D1FAE5',
+            },
+            orange: {
+              accent: '#EA580C',
+              light: '#FFEDD5',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+            mono: ['"Space Grotesk"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="text-charcoal-800 font-sans antialiased selection:selection:text-teal-900">
+
+  <!-- =========================================================================
+       00. STICKY NAVBAR
+       ========================================================================= -->
+  <header class="sticky top-0 z-50 bg-blue-400 backdrop-blur-md border-b border-stone-200/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl bg-charcoal-900 text-white flex items-center justify-center font-mono font-bold text-lg border border-teal-500/40 shadow-sm group-hover:scale-105 transition-transform duration-300">
+            <span class="text-teal-400">AI</span>
+          </div>
+          <div>
+            <span class="font-bold text-xl tracking-tight text-charcoal-900 flex items-center gap-1.5">
+              Learning Daily With AI
+              <span class="w-2 h-2 rounded-full bg-orange-accent animate-ping opacity-75 inline-block"></span>
+            </span>
+            <p class="text-[10px] uppercase font-mono tracking-widest text-charcoal-500 font-medium -mt-1">
+              Article & Learning Platform
+            </p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center bg-blue-400 00 gap-8">
+          <a href="#hero" class="text-sm font-semibold text-charcoal-700 hover:text-teal-accent transition-colors duration-200">Home</a>
+          <a href="#what-is-ai" class="text-sm font-semibold text-charcoal-700 hover:text-teal-accent transition-colors duration-200">What is AI?</a>
+          <a href="#types-of-ai" class="text-sm font-semibold text-charcoal-700 hover:text-teal-accent transition-colors duration-200">Types of AI</a>
+          <a href="#learning-path" class="text-sm font-semibold text-charcoal-700 hover:text-teal-accent transition-colors duration-200">Learning Path</a>
+          <a href="#ai-around-us" class="text-sm font-semibold text-charcoal-700 hover:text-teal-accent transition-colors duration-200">AI Around Us</a>
+        </nav>
+
+        <!-- Action Button -->
+        <div class="hidden sm:flex items-center gap-4">
+          <a href="#learning-path" class="inline-flex items-center gap-2 bg-teal-accent hover:bg-teal-hover text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
+            <span>Start Learning</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle (CSS Only Details) -->
+        <div class="md:hidden">
+          <a href="#what-is-ai" class="p-2 text-charcoal-800 hover:text-teal-accent focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+
+  <!-- =========================================================================
+       HERO SECTION (Asymmetric 2-Column with CSS Floating Constellation)
+       ========================================================================= -->
+  <section id="hero" class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-32 bg-cream-100 bg-grid-pattern border-b border-stone-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Column: Editorial Content -->
+        <div class="lg:col-span-7 space-y-6 text-left">
+          
+          <!-- Small Label -->
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-cream-200 border border-stone-300/80 text-xs font-mono font-bold tracking-widest text-charcoal-700">
+            <span class="w-2 h-2 rounded-full bg-emerald-accent"></span>
+            THE AI JOURNEY — 01
+            <span class="text-stone-400">|</span>
+            <span class="text-teal-700 font-semibold">ISSUE 2026</span>
+          </div>
+
+          <!-- Main Headline -->
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-charcoal-900 tracking-tight leading-[1.15]">
+            Artificial Intelligence, <br class="hidden sm:inline">
+            <span class="font-serif italic font-normal text-teal-accent underline decoration-orange-accent/40 decoration-wavy decoration-2">Explained Simply.</span>
+          </h1>
+
+          <!-- Short Paragraph -->
+          <p class="text-lg sm:text-xl text-charcoal-600 font-normal leading-relaxed max-w-2xl">
+            “Explore how machines learn, recognize patterns, understand information and make intelligent decisions.”
+          </p>
+
+          <!-- Buttons -->
+          <div class="pt-2 flex flex-wrap items-center gap-4">
+            <a href="#what-is-ai" class="inline-flex items-center gap-2.5 bg-charcoal-900 hover:bg-teal-accent text-white px-7 py-3.5 rounded-xl font-semibold text-base shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group">
+              <span>Start Exploring</span>
+              <span class="group-hover:translate-x-1 transition-transform duration-200">→</span>
+            </a>
+            
+            <a href="#article-full" class="inline-flex items-center gap-2 bg-cream-200 hover:bg-stone-200/80 text-charcoal-800 border border-stone-300 px-6 py-3.5 rounded-xl font-semibold text-base transition-colors duration-200">
+              <svg class="w-5 h-5 text-teal-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+              </svg>
+              <span>Read Article</span>
+            </a>
+          </div>
+
+          <!-- Editorial Meta Tagline -->
+          <div class="pt-6 border-t border-stone-200 flex items-center gap-6 text-xs text-charcoal-500 font-mono">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-orange-accent"></span>
+              <span>Visual Guide Included</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-teal-accent"></span>
+              <span>Zero Jargon Required</span>
+            </div>
+            <div class="hidden sm:flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-accent"></span>
+              <span>Basic → Intermediate</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Simple AI Floating Constellation (Pure CSS) -->
+        <div class="lg:col-span-5 flex items-center justify-center">
+          <div class="relative w-full max-w-[380px] sm:max-w-[420px] aspect-square flex items-center justify-center">
+            
+            <!-- Radiant Background Glow -->
+            <div class="absolute w-72 h-72 rounded-full bg-gradient-to-tr from-teal-200/40 via-emerald-100/30 to-orange-100/40 blur-3xl animate-pulse-glow"></div>
+            
+            <!-- Large Static Backdrop Circle -->
+            <div class="absolute w-80 h-80 sm:w-96 sm:h-96 rounded-full border border-stone-300/80 bg-cream-50/50 shadow-inner"></div>
+
+            <!-- Outer Dashed Orbital Ring (Constellation Line) -->
+            <div class="absolute w-72 h-72 sm:w-80 sm:h-80 constellation-orbit animate-spin-slow"></div>
+
+            <!-- Inner Orbit Accent -->
+            <div class="absolute w-48 h-48 rounded-full border border-teal-500/20"></div>
+
+            <!-- Center Core -->
+            <div class="relative z-10 w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-charcoal-900 text-white flex flex-col items-center justify-center shadow-xl border-4 border-cream-100">
+              <span class="text-xs font-mono text-teal-400 font-bold uppercase tracking-wider">CORE</span>
+              <span class="text-base sm:text-lg font-extrabold tracking-tight">AI</span>
+              <span class="text-[9px] text-stone-400 font-mono">INTELLIGENCE</span>
+            </div>
+
+            <!-- Floating Label 1: DATA (Top Right) -->
+            <div class="absolute -top-2 right-4 sm:right-6 z-20 animate-float-delayed">
+              <div class="flex items-center gap-2 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-xl shadow-md border border-stone-200">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                <span class="font-mono font-bold text-xs sm:text-sm text-charcoal-800">DATA</span>
+                <span class="text-[10px] text-stone-400 font-mono">01</span>
+              </div>
+            </div>
+
+            <!-- Floating Label 2: AI (Top Left) -->
+            <div class="absolute top-8 -left-2 sm:left-2 z-20 animate-float-slow">
+              <div class="flex items-center gap-2 bg-charcoal-800 text-white px-4 py-2 rounded-xl shadow-md border border-teal-500/30">
+                <span class="w-2.5 h-2.5 rounded-full bg-teal-400"></span>
+                <span class="font-mono font-bold text-xs sm:text-sm">AI</span>
+                <span class="text-[10px] text-teal-300 font-mono">LOGIC</span>
+              </div>
+            </div>
+
+            <!-- Floating Label 3: ML (Bottom Left) -->
+            <div class="absolute -bottom-2 left-6 sm:left-8 z-20 animate-float-medium">
+              <div class="flex items-center gap-2 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-xl shadow-md border border-stone-200">
+                <span class="w-2.5 h-2.5 rounded-full bg-orange-accent"></span>
+                <span class="font-mono font-bold text-xs sm:text-sm text-charcoal-800">ML</span>
+                <span class="text-[10px] text-stone-400 font-mono">LEARN</span>
+              </div>
+            </div>
+
+            <!-- Floating Label 4: NLP (Bottom Right) -->
+            <div class="absolute bottom-6 -right-2 sm:right-2 z-20 animate-float-alt">
+              <div class="flex items-center gap-2 bg-cream-200 px-4 py-2 rounded-xl shadow-md border border-teal-600/30">
+                <span class="w-2.5 h-2.5 rounded-full bg-teal-600"></span>
+                <span class="font-mono font-bold text-xs sm:text-sm text-charcoal-900">NLP</span>
+                <span class="text-[10px] text-teal-700 font-mono">LANG</span>
+              </div>
+            </div>
+
+            <!-- Floating Label 5: VISION (Center Top) -->
+            <div class="absolute top-28 right-0 sm:-right-4 z-20 animate-float-slow">
+              <div class="flex items-center gap-1.5 bg-white/95 backdrop-blur-sm px-3.5 py-1.5 rounded-lg shadow-sm border border-stone-200">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                <span class="font-mono font-bold text-xs text-charcoal-800">VISION</span>
+              </div>
+            </div>
+
+            <!-- Geometric Connecting Dotted Lines -->
+            <svg class="absolute inset-0 w-full h-full pointer-events-none stroke-stone-300" stroke-width="1.5" stroke-dasharray="4 4" fill="none">
+              <line x1="50%" y1="50%" x2="25%" y2="22%"></line>
+              <line x1="50%" y1="50%" x2="80%" y2="15%"></line>
+              <line x1="50%" y1="50%" x2="30%" y2="85%"></line>
+              <line x1="50%" y1="50%" x2="82%" y2="80%"></line>
+            </svg>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       01 — ARTICLE SECTION: What Is Artificial Intelligence?
+       ========================================================================= -->
+  <section id="what-is-ai" class="py-20 lg:py-28 bg-cream-50 border-b border-stone-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="mb-14">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="font-mono text-sm font-bold text-teal-accent tracking-wider uppercase">ARTICLE 01</span>
+          <span class="w-12 h-px bg-teal-accent/40"></span>
+          <span class="text-xs font-mono text-charcoal-500 uppercase">THE FOUNDATION</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal-900 tracking-tight">
+          What Is Artificial Intelligence?
+        </h2>
+        <p class="mt-2 text-lg text-charcoal-600 font-serif italic">
+          Decoding the bridge between human thinking and computational algorithms.
+        </p>
+      </div>
+
+      <!-- Main Article & Visual Callout Grid -->
+      <div id="article-full" class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left: Long-form Editorial Article (8 Cols) -->
+        <div class="lg:col-span-8 space-y-6 text-charcoal-700 leading-relaxed text-base sm:text-lg">
+          
+          <p class="drop-cap">
+            At its simplest core, <strong class="text-charcoal-900 bg-teal-light/50 px-1 rounded">Artificial Intelligence (AI)</strong> refers to computer systems engineered to perform intellectual tasks that typically require human cognition. This includes recognizing speech, identifying objects in a photo, translating languages, and making complex decisions under uncertainty.
+          </p>
+
+          <p>
+            For decades, software relied on <strong class="text-charcoal-900">deterministic rules</strong>: programmers wrote rigid <code class="font-mono text-sm bg-stone-200/80 px-1.5 py-0.5 rounded text-charcoal-900">if-then</code> instructions for every conceivable scenario. If a situation was not pre-coded, the program failed.
+          </p>
+
+          <!-- Key Distinction Callout Block -->
+          <div class="my-8 p-6 rounded-2xl bg-cream-200 border-l-4 border-teal-accent">
+            <h3 class="text-base font-bold text-charcoal-900 font-mono uppercase tracking-wide mb-2 flex items-center gap-2">
+              <span class="text-teal-accent font-bold">↳</span> The Fundamental Shift in Logic
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm mt-3">
+              <div class="p-3 bg-white rounded-xl border border-stone-200/80">
+                <span class="text-xs font-mono font-bold text-charcoal-500 uppercase block mb-1">Traditional Programming</span>
+                <span class="font-mono font-semibold text-charcoal-900">Data + Rules = Output</span>
+                <p class="text-xs text-charcoal-600 mt-1">Humans craft every rule manually by hand.</p>
+              </div>
+              <div class="p-3 bg-white rounded-xl border border-teal-500/40 shadow-sm">
+                <span class="text-xs font-mono font-bold text-teal-accent uppercase block mb-1">Artificial Intelligence</span>
+                <span class="font-mono font-semibold text-charcoal-900">Data + Output = Learned Rules</span>
+                <p class="text-xs text-charcoal-600 mt-1">The machine discovers hidden rules automatically.</p>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-bold text-charcoal-900 tracking-tight pt-4">
+            How Does AI Learn from Experience?
+          </h3>
+
+          <p>
+            AI does not “think” with biological consciousness. Instead, it relies on <strong class="text-charcoal-900">mathematical patterns</strong>. When an AI is shown millions of labeled photographs of cats and dogs, it analyzes pixel values, edge boundaries, color distributions, and subtle textures.
+          </p>
+
+          <p>
+            Through continuous trial and error—adjusting its internal numerical weights through mathematical feedback—it develops an intuition for what makes a cat different from a dog, even when presented with a photo it has never seen before.
+          </p>
+
+          <h3 class="text-2xl font-bold text-charcoal-900 tracking-tight pt-4">
+            Why Does AI Matter Today?
+          </h3>
+
+          <p>
+            AI is not about replacing human creativity; it is about <strong class="text-charcoal-900 bg-orange-light/50 px-1 rounded">amplifying human capability</strong>. From discovering life-saving drugs in biotechnology to predicting extreme climate patterns and personalizing education for children across the globe, AI provides the cognitive infrastructure for 21st-century progress.
+          </p>
+
+        </div>
+
+        <!-- Right: Side Visual Flow & Highlights (4 Cols) -->
+        <div class="lg:col-span-4 space-y-6">
+          
+          <!-- Visual Process Pill Sequence -->
+          <div class="p-6 rounded-2xl bg-cream-200 border border-stone-300 shadow-sm">
+            <span class="text-xs font-mono font-bold tracking-wider text-charcoal-500 uppercase block mb-4">
+              VISUAL REASONING LOOP
+            </span>
+
+            <div class="space-y-3">
+              
+              <div class="flex items-center gap-3 p-3 bg-white rounded-xl border border-stone-200 shadow-sm">
+                <div class="w-8 h-8 rounded-lg bg-teal-100 text-teal-800 font-mono font-bold flex items-center justify-center text-xs">
+                  01
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-charcoal-900 font-mono">DATA</h4>
+                  <p class="text-xs text-charcoal-500">Massive examples & features</p>
+                </div>
+              </div>
+
+              <div class="flex justify-center text-stone-400">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+              </div>
+
+              <div class="flex items-center gap-3 p-3 bg-white rounded-xl border border-stone-200 shadow-sm">
+                <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-800 font-mono font-bold flex items-center justify-center text-xs">
+                  02
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-charcoal-900 font-mono">LEARNING</h4>
+                  <p class="text-xs text-charcoal-500">Weight adjustment & training</p>
+                </div>
+              </div>
+
+              <div class="flex justify-center text-stone-400">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+              </div>
+
+              <div class="flex items-center gap-3 p-3 bg-white rounded-xl border border-stone-200 shadow-sm">
+                <div class="w-8 h-8 rounded-lg bg-orange-100 text-orange-800 font-mono font-bold flex items-center justify-center text-xs">
+                  03
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-charcoal-900 font-mono">PATTERN</h4>
+                  <p class="text-xs text-charcoal-500">Recognizing underlying structure</p>
+                </div>
+              </div>
+
+              <div class="flex justify-center text-stone-400">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+              </div>
+
+              <div class="flex items-center gap-3 p-3 bg-charcoal-900 text-white rounded-xl border border-teal-500/40 shadow-sm">
+                <div class="w-8 h-8 rounded-lg bg-teal-500 text-charcoal-900 font-mono font-bold flex items-center justify-center text-xs">
+                  04
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-white font-mono">DECISION</h4>
+                  <p class="text-xs text-stone-300">Accurate prediction or action</p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-stone-300 text-center font-mono text-[11px] text-teal-800 font-semibold tracking-wider">
+              DATA → LEARNING → PATTERN → DECISION
+            </div>
+          </div>
+
+          <!-- Editorial Pull Quote -->
+          <div class="p-6 rounded-2xl bg-white border border-stone-200 shadow-sm space-y-3">
+            <span class="text-3xl text-teal-accent font-serif leading-none">“</span>
+            <p class="font-serif italic text-lg text-charcoal-800 -mt-2">
+              AI does not perceive the world with feelings. It perceives the world with statistical probability and mathematical elegance.
+            </p>
+            <p class="text-xs font-mono text-charcoal-500 font-semibold uppercase tracking-wider">— AI Odyssey Field Notes</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       02 — HOW AI LEARNS (Visual Learning Process)
+       ========================================================================= -->
+  <section class="py-20 lg:py-28 bg-cream-200/60 border-b border-stone-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Heading -->
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cream-100 border border-stone-300 text-xs font-mono font-bold text-teal-accent uppercase mb-3">
+          PROCESS BLUEPRINT 02
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-bold text-charcoal-900 tracking-tight">
+          How AI Learns
+        </h2>
+        <p class="mt-2 text-charcoal-600 text-base">
+          From raw observations to intelligent execution in 5 clear milestones.
+        </p>
+      </div>
+
+      <!-- Visual Step-by-Step Flow (Responsive Cards & Arrows) -->
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-4 relative">
+        
+        <!-- Step 1: DATA -->
+        <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm hover:shadow-md hover:border-teal-accent/50 transition-all duration-300 group flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-8 h-8 rounded-lg bg-stone-100 text-charcoal-700 font-mono font-bold text-xs flex items-center justify-center group-hover:bg-teal-accent group-hover:text-white transition-colors">01</span>
+              <span class="text-xs font-mono text-emerald-accent font-semibold">INPUT</span>
+            </div>
+            <h3 class="text-xl font-bold font-mono text-charcoal-900 mb-2">DATA</h3>
+            <p class="text-sm text-charcoal-600 leading-relaxed">
+              Collecting millions of labeled examples, images, text documents, or sensor signals.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between text-xs text-stone-400 font-mono">
+            <span>Raw Fuel</span>
+            <span class="text-teal-accent">↓</span>
+          </div>
+        </div>
+
+        <!-- Step 2: TRAINING -->
+        <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm hover:shadow-md hover:border-teal-accent/50 transition-all duration-300 group flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-8 h-8 rounded-lg bg-stone-100 text-charcoal-700 font-mono font-bold text-xs flex items-center justify-center group-hover:bg-teal-accent group-hover:text-white transition-colors">02</span>
+              <span class="text-xs font-mono text-teal-accent font-semibold">COMPUTE</span>
+            </div>
+            <h3 class="text-xl font-bold font-mono text-charcoal-900 mb-2">TRAINING</h3>
+            <p class="text-sm text-charcoal-600 leading-relaxed">
+              Feeding data through neural algorithms and calculating errors through mathematical loss functions.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between text-xs text-stone-400 font-mono">
+            <span>Iterations</span>
+            <span class="text-teal-accent">↓</span>
+          </div>
+        </div>
+
+        <!-- Step 3: PATTERN -->
+        <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm hover:shadow-md hover:border-teal-accent/50 transition-all duration-300 group flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-8 h-8 rounded-lg bg-stone-100 text-charcoal-700 font-mono font-bold text-xs flex items-center justify-center group-hover:bg-teal-accent group-hover:text-white transition-colors">03</span>
+              <span class="text-xs font-mono text-orange-accent font-semibold">INSIGHT</span>
+            </div>
+            <h3 class="text-xl font-bold font-mono text-charcoal-900 mb-2">PATTERN</h3>
+            <p class="text-sm text-charcoal-600 leading-relaxed">
+              Discovering underlying relationships, weights, syntactic structures, and statistical correlations.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between text-xs text-stone-400 font-mono">
+            <span>Weights</span>
+            <span class="text-teal-accent">↓</span>
+          </div>
+        </div>
+
+        <!-- Step 4: PREDICTION -->
+        <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm hover:shadow-md hover:border-teal-accent/50 transition-all duration-300 group flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-8 h-8 rounded-lg bg-stone-100 text-charcoal-700 font-mono font-bold text-xs flex items-center justify-center group-hover:bg-teal-accent group-hover:text-white transition-colors">04</span>
+              <span class="text-xs font-mono text-teal-accent font-semibold">INFERENCE</span>
+            </div>
+            <h3 class="text-xl font-bold font-mono text-charcoal-900 mb-2">PREDICTION</h3>
+            <p class="text-sm text-charcoal-600 leading-relaxed">
+              Evaluating new, unseen inputs against learned patterns to estimate the most likely outcome.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between text-xs text-stone-400 font-mono">
+            <span>Confidence</span>
+            <span class="text-teal-accent">↓</span>
+          </div>
+        </div>
+
+        <!-- Step 5: RESULT -->
+        <div class="bg-charcoal-900 text-white p-6 rounded-2xl border border-teal-500/40 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-8 h-8 rounded-lg bg-teal-500 text-charcoal-900 font-mono font-bold text-xs flex items-center justify-center">05</span>
+              <span class="text-xs font-mono text-teal-300 font-semibold">OUTCOME</span>
+            </div>
+            <h3 class="text-xl font-bold font-mono text-white mb-2">RESULT</h3>
+            <p class="text-sm text-stone-300 leading-relaxed">
+              Delivering accurate translations, generated artwork, medical diagnostics, or navigation commands.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-charcoal-700 flex items-center justify-between text-xs text-teal-400 font-mono">
+            <span>Actionable Value</span>
+            <span>✓</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       03 — TYPES OF AI (ANI, AGI, ASI)
+       ========================================================================= -->
+  <section id="types-of-ai" class="py-20 lg:py-28 bg-cream-50 border-b border-stone-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
+        <div>
+          <div class="flex items-center gap-3 mb-2">
+            <span class="font-mono text-sm font-bold text-teal-accent uppercase">CLASSIFICATION 03</span>
+            <span class="w-8 h-px bg-teal-accent"></span>
+            <span class="text-xs font-mono text-charcoal-500 uppercase">SPECTRUM OF CAPABILITY</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-charcoal-900 tracking-tight">
+            The Three Horizons of AI
+          </h2>
+        </div>
+        <p class="text-sm text-charcoal-600 max-w-md font-normal">
+          Artificial Intelligence is broadly categorized into three distinct evolutionary tiers based on general reasoning capabilities.
+        </p>
+      </div>
+
+      <!-- 3 Visually Different Cards -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- CARD 1: Narrow AI (ANI) -->
+        <div class="bg-white rounded-3xl p-8 border border-stone-200 shadow-sm hover:shadow-xl hover:border-teal-500/40 transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
+          <div class="absolute top-0 right-0 w-28 h-28 bg-teal-50 rounded-bl-full -z-0 group-hover:scale-110 transition-transform"></div>
+          
+          <div class="relative z-10">
+            <!-- Status Badge & Number -->
+            <div class="flex items-center justify-between mb-6">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-light text-emerald-800 text-xs font-mono font-bold">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                ACTIVE TODAY
+              </span>
+              <span class="text-3xl font-serif italic text-stone-300 font-bold">01</span>
+            </div>
+
+            <h3 class="text-2xl font-bold text-charcoal-900">Narrow AI</h3>
+            <div class="font-mono text-xs font-bold text-teal-accent uppercase tracking-wider mb-2">ANI — ARTIFICIAL NARROW INTELLIGENCE</div>
+            <p class="text-sm font-serif italic text-charcoal-500 mb-4">“The Specialist”</p>
+
+            <p class="text-sm text-charcoal-700 leading-relaxed mb-6">
+              Narrow AI is engineered and trained to perform specific, predefined tasks with superhuman precision. It cannot transfer its intelligence to unrelated tasks.
+            </p>
+
+            <!-- Examples -->
+            <div class="space-y-2 pt-4 border-t border-stone-100">
+              <span class="text-xs font-mono font-bold text-charcoal-500 uppercase block">Everyday Examples:</span>
+              <ul class="text-xs text-charcoal-700 space-y-1.5 font-medium">
+                <li class="flex items-center gap-2">
+                  <span class="text-teal-accent">✓</span> Voice assistants (Siri, Alexa)
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-teal-accent">✓</span> Face recognition & fingerprint unlocking
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-teal-accent">✓</span> Recommendation algorithms (Spotify, YouTube)
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="relative z-10 pt-8 mt-6 border-t border-stone-100">
+            <a href="#what-is-ai" class="inline-flex items-center gap-2 text-xs font-mono font-bold text-teal-accent hover:text-teal-hover transition-colors uppercase tracking-wider">
+              <span>Learn More About ANI</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 2: General AI (AGI) -->
+        <div class="bg-cream-200/80 rounded-3xl p-8 border-2 border-stone-300 shadow-sm hover:shadow-xl hover:border-orange-accent/40 transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
+          <div class="absolute top-0 right-0 w-28 h-28 bg-orange-100/50 rounded-bl-full -z-0 group-hover:scale-110 transition-transform"></div>
+
+          <div class="relative z-10">
+            <!-- Status Badge & Number -->
+            <div class="flex items-center justify-between mb-6">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-light text-orange-800 text-xs font-mono font-bold">
+                <span class="w-1.5 h-1.5 rounded-full bg-orange-accent animate-pulse"></span>
+                RESEARCH GOAL
+              </span>
+              <span class="text-3xl font-serif italic text-stone-400 font-bold">02</span>
+            </div>
+
+            <h3 class="text-2xl font-bold text-charcoal-900">General AI</h3>
+            <div class="font-mono text-xs font-bold text-orange-accent uppercase tracking-wider mb-2">AGI — ARTIFICIAL GENERAL INTELLIGENCE</div>
+            <p class="text-sm font-serif italic text-charcoal-500 mb-4">“The Generalist”</p>
+
+            <p class="text-sm text-charcoal-700 leading-relaxed mb-6">
+              AGI represents a machine capable of understanding, learning, and applying intellectual knowledge across any discipline just like a human mind.
+            </p>
+
+            <!-- Examples -->
+            <div class="space-y-2 pt-4 border-t border-stone-200">
+              <span class="text-xs font-mono font-bold text-charcoal-500 uppercase block">Key Attributes:</span>
+              <ul class="text-xs text-charcoal-700 space-y-1.5 font-medium">
+                <li class="flex items-center gap-2">
+                  <span class="text-orange-accent">✦</span> Cross-domain abstract reasoning
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-orange-accent">✦</span> Transfer learning without retraining
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-orange-accent">✦</span> Self-directed problem comprehension
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="relative z-10 pt-8 mt-6 border-t border-stone-200">
+            <a href="#learning-path" class="inline-flex items-center gap-2 text-xs font-mono font-bold text-orange-accent hover:text-charcoal-900 transition-colors uppercase tracking-wider">
+              <span>Explore Frontier Research</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 3: Super AI (ASI) -->
+        <div class="bg-charcoal-900 text-white rounded-3xl p-8 border border-stone-800 shadow-xl hover:shadow-2xl hover:border-teal-400/50 transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
+          <div class="absolute top-0 right-0 w-28 h-28 bg-teal-500/10 rounded-bl-full -z-0 group-hover:scale-110 transition-transform"></div>
+
+          <div class="relative z-10">
+            <!-- Status Badge & Number -->
+            <div class="flex items-center justify-between mb-6">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-stone-800 text-stone-300 text-xs font-mono font-bold border border-stone-700">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
+                THEORETICAL
+              </span>
+              <span class="text-3xl font-serif italic text-stone-700 font-bold">03</span>
+            </div>
+
+            <h3 class="text-2xl font-bold text-white">Super AI</h3>
+            <div class="font-mono text-xs font-bold text-teal-400 uppercase tracking-wider mb-2">ASI — ARTIFICIAL SUPER INTELLIGENCE</div>
+            <p class="text-sm font-serif italic text-stone-400 mb-4">“The Hypothetical Mind”</p>
+
+            <p class="text-sm text-stone-300 leading-relaxed mb-6">
+              A theoretical future intelligence that surpasses the best human brains in every practical field: scientific creativity, general wisdom, and social mastery.
+            </p>
+
+            <!-- Examples -->
+            <div class="space-y-2 pt-4 border-t border-stone-800">
+              <span class="text-xs font-mono font-bold text-stone-400 uppercase block">Theoretical Scope:</span>
+              <ul class="text-xs text-stone-300 space-y-1.5 font-medium">
+                <li class="flex items-center gap-2">
+                  <span class="text-teal-400">✧</span> Instantaneous planetary computation
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-teal-400">✧</span> Autonomous scientific breakthroughs
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-teal-400">✧</span> Purely speculative; does not exist today
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="relative z-10 pt-8 mt-6 border-t border-stone-800">
+            <a href="#why-learn" class="inline-flex items-center gap-2 text-xs font-mono font-bold text-teal-400 hover:text-white transition-colors uppercase tracking-wider">
+              <span>Read Ethical Overview</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       04 — AI LEARNING PATH (Vertical Connected Roadmap)
+       ========================================================================= -->
+  <section id="learning-path" class="py-20 lg:py-28 bg-cream-100 border-b border-stone-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cream-200 border border-stone-300 text-xs font-mono font-bold text-teal-accent uppercase mb-3">
+          CURRICULUM ROADMAP 04
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-bold text-charcoal-900 tracking-tight">
+          Your Journey Into AI
+        </h2>
+        <p class="mt-2 text-charcoal-600 text-base">
+          A step-by-step progressive guide from fundamental principles to frontier architectures.
+        </p>
+      </div>
+
+      <!-- Vertical Roadmap Container -->
+      <div class="relative pl-6 sm:pl-10 space-y-12">
+        
+        <!-- Connecting Vertical Line -->
+        <div class="absolute left-6 sm:left-10 top-6 bottom-6 w-0.5 border-l-2 border-dashed border-teal-500/40 -translate-x-1/2"></div>
+
+        <!-- Level 01: Beginner -->
+        <div class="relative flex items-start gap-6 group">
+          <!-- Circle Indicator -->
+          <div class="relative z-10 w-12 h-12 rounded-2xl bg-teal-accent text-white font-mono font-bold text-base flex items-center justify-center shadow-md group-hover:scale-110 group-hover:bg-charcoal-900 transition-all duration-300 shrink-0">
+            01
+          </div>
+
+          <!-- Card Content -->
+          <div class="bg-white p-7 rounded-2xl border border-stone-200 shadow-sm hover:shadow-md transition-all duration-300 w-full">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <span class="text-xs font-mono font-bold text-teal-accent tracking-wider uppercase">LEVEL 01 — BEGINNER</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-emerald-light text-emerald-800 text-[11px] font-mono font-semibold">Recommended Start</span>
+            </div>
+
+            <h3 class="text-2xl font-bold text-charcoal-900 mb-2">The AI Foundations</h3>
+            <p class="text-sm text-charcoal-600 mb-6">
+              Build core intuition about machine learning, statistical modeling, and foundational AI vocabulary without getting bogged down in complex mathematics.
+            </p>
+
+            <!-- Learning Topics Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="p-3 bg-cream-50 rounded-xl border border-stone-200 flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-teal-accent"></span>
+                <div>
+                  <h4 class="font-bold text-sm text-charcoal-900">AI Fundamentals</h4>
+                  <p class="text-xs text-charcoal-500">History, definitions & types</p>
+                </div>
+              </div>
+
+              <div class="p-3 bg-cream-50 rounded-xl border border-stone-200 flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-teal-accent"></span>
+                <div>
+                  <h4 class="font-bold text-sm text-charcoal-900">Machine Learning Basics</h4>
+                  <p class="text-xs text-charcoal-500">Supervised vs. Unsupervised</p>
+                </div>
+              </div>
+
+              <div class="p-3 bg-cream-50 rounded-xl border border-stone-200 flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-teal-accent"></span>
+                <div>
+                  <h4 class="font-bold text-sm text-charcoal-900">AI Applications</h4>
+                  <p class="text-xs text-charcoal-500">Real-world modern use cases</p>
+                </div>
+              </div>
+
+              <div class="p-3 bg-cream-50 rounded-xl border border-stone-200 flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-teal-accent"></span>
+                <div>
+                  <h4 class="font-bold text-sm text-charcoal-900">Basic Terminology</h4>
+                  <p class="text-xs text-charcoal-500">Key metrics, data & models</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Level 02: Intermediate -->
+        <div class="relative flex items-start gap-6 group">
+          <!-- Circle Indicator -->
+          <div class="relative z-10 w-12 h-12 rounded-2xl bg-cream-200 border-2 border-teal-500 text-teal-800 font-mono font-bold text-base flex items-center justify-center shadow-md group-hover:scale-110 group-hover:bg-teal-accent group-hover:text-white transition-all duration-300 shrink-0">
+            02
+          </div>
+
+          <!-- Card Content -->
+          <div class="bg-white p-7 rounded-2xl border border-stone-200 shadow-sm hover:shadow-md transition-all duration-300 w-full">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <span class="text-xs font-mono font-bold text-teal-accent tracking-wider uppercase">LEVEL 02 — INTERMEDIATE</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-cream-200 text-charcoal-700 text-[11px] font-mono font-semibold">Core Architectures</span>
+            </div>
+
+            <h3 class="text-2xl font-bold text-charcoal-900 mb-2">Deep Systems & Perception</h3>
+            <p class="text-sm text-charcoal-600 mb-6">
+              Dive into multi-layered artificial neural networks, computer vision, and computational linguistics to see how modern AI perceives sensory data.
+            </p>
+
+            <!-- Learning Topics Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="p-3 bg-cream-50 rounded-xl border border-stone-200 flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-orange-accent"></span>
+                <div>
+                  <h4 class="font-bold text-sm text-charcoal-900">Neural Networks</h4>
+                  <p class="text-xs text-charcoal-500">Nodes, layers & activations</p>
+                </div>
+              </div>
+
+              <div class="p-3 bg-cream-50 rounded-xl border border-stone-200 flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-orange-accent"></span>
+                <div>
+                  <h4 class="font-bold text-sm text-charcoal-900">Deep Learning</h4>
+                  <p class="text-xs text-charcoal-500">Backprop & gradient descent</p>
+                </div>
+              </div>
+
+              <div class="p-3 bg-cream-50 rounded-xl border border-stone-200 flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-orange-accent"></span>
+                <div>
+                  <h4 class="font-bold text-sm text-charcoal-900">Natural Language Processing</h4>
+                  <p class="text-xs text-charcoal-500">Text tokenization & semantics</p>
+                </div>
+              </div>
+
+              <div class="p-3 bg-cream-50 rounded-xl border border-stone-200 flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-orange-accent"></span>
+                <div>
+                  <h4 class="font-bold text-sm text-charcoal-900">Computer Vision</h4>
+                  <p class="text-xs text-charcoal-500">Image recognition & CNNs</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Level 03: Explore More -->
+        <div class="relative flex items-start gap-6 group">
+          <!-- Circle Indicator -->
+          <div class="relative z-10 w-12 h-12 rounded-2xl bg-charcoal-900 text-white font-mono font-bold text-base flex items-center justify-center shadow-md group-hover:scale-110 group-hover:bg-teal-accent transition-all duration-300 shrink-0">
+            03
+          </div>
+
+          <!-- Card Content -->
+          <div class="bg-white p-7 rounded-2xl border border-stone-200 shadow-sm hover:shadow-md transition-all duration-300 w-full">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <span class="text-xs font-mono font-bold text-orange-accent tracking-wider uppercase">LEVEL 03 — EXPLORE MORE</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-orange-light text-orange-800 text-[11px] font-mono font-semibold">Frontier Innovations</span>
+            </div>
+
+            <h3 class="text-2xl font-bold text-charcoal-900 mb-2">Generative AI & Autonomous Agents</h3>
+            <p class="text-sm text-charcoal-600 mb-6">
+              Explore the frontiers of synthetic creativity, transformer foundations, autonomous agentic loops, and embodied physical robotics.
+            </p>
+
+            <!-- Learning Topics Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="p-3 bg-cream-50 rounded-xl border border-stone-200 flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-emerald-accent"></span>
+                <div>
+                  <h4 class="font-bold text-sm text-charcoal-900">Generative AI</h4>
+                  <p class="text-xs text-charcoal-500">Diffusion, VAEs & synthesis</p>
+                </div>
+              </div>
+
+              <div class="p-3 bg-cream-50 rounded-xl border border-stone-200 flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-emerald-accent"></span>
+                <div>
+                  <h4 class="font-bold text-sm text-charcoal-900">Large Language Models (LLMs)</h4>
+                  <p class="text-xs text-charcoal-500">Transformers & attention layers</p>
+                </div>
+              </div>
+
+              <div class="p-3 bg-cream-50 rounded-xl border border-stone-200 flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-emerald-accent"></span>
+                <div>
+                  <h4 class="font-bold text-sm text-charcoal-900">AI Agents</h4>
+                  <p class="text-xs text-charcoal-500">Autonomous reasoning & tool use</p>
+                </div>
+              </div>
+
+              <div class="p-3 bg-cream-50 rounded-xl border border-stone-200 flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-emerald-accent"></span>
+                <div>
+                  <h4 class="font-bold text-sm text-charcoal-900">Robotics & Embodiment</h4>
+                  <p class="text-xs text-charcoal-500">Physical sensorimotor control</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       05 — AI AROUND US ("A Day With AI" Editorial Timeline)
+       ========================================================================= -->
+  <section id="ai-around-us" class="py-20 lg:py-28 bg-cream-200/50 border-b border-stone-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+        <div>
+          <div class="flex items-center gap-3 mb-2">
+            <span class="font-mono text-sm font-bold text-teal-accent uppercase">REALITY CHECK 05</span>
+            <span class="w-8 h-px bg-teal-accent"></span>
+            <span class="text-xs font-mono text-charcoal-500 uppercase">A DAY WITH AI</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-charcoal-900 tracking-tight">
+            AI Around Us
+          </h2>
+        </div>
+        <p class="text-sm text-charcoal-600 max-w-md font-normal">
+          You interact with artificial intelligence dozens of times every single day—often without even realizing it.
+        </p>
+      </div>
+
+      <!-- Editorial Daily Timeline -->
+      <div class="space-y-6">
+        
+        <!-- Timeline Item 1 -->
+        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-stone-200 shadow-sm hover:shadow-md hover:border-teal-500/40 transition-all duration-300 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+          <div class="flex items-center gap-4">
+            <div class="font-mono text-lg font-bold text-teal-accent bg-teal-light/60 px-4 py-2 rounded-xl">
+              07:00 AM
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-charcoal-900">Voice Assistant & Smart Morning Alarm</h3>
+              <p class="text-sm text-charcoal-600 mt-1">
+                Your phone's speech recognition processes your voice command to read weather and calendar briefings via natural NLP synthesis.
+              </p>
+            </div>
+          </div>
+          <div class="shrink-0 flex items-center gap-2">
+            <span class="px-3 py-1 bg-stone-100 text-charcoal-700 text-xs font-mono rounded-lg border border-stone-200">Speech AI</span>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2 -->
+        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-stone-200 shadow-sm hover:shadow-md hover:border-teal-500/40 transition-all duration-300 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+          <div class="flex items-center gap-4">
+            <div class="font-mono text-lg font-bold text-emerald-accent bg-emerald-light/60 px-4 py-2 rounded-xl">
+              09:00 AM
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-charcoal-900">Smart GPS Navigation & Route Optimization</h3>
+              <p class="text-sm text-charcoal-600 mt-1">
+                Predictive traffic algorithms calculate optimal routes dynamically, avoiding sudden road accidents using real-time sensor telemetry.
+              </p>
+            </div>
+          </div>
+          <div class="shrink-0 flex items-center gap-2">
+            <span class="px-3 py-1 bg-stone-100 text-charcoal-700 text-xs font-mono rounded-lg border border-stone-200">Predictive Graph AI</span>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3 -->
+        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-stone-200 shadow-sm hover:shadow-md hover:border-teal-500/40 transition-all duration-300 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+          <div class="flex items-center gap-4">
+            <div class="font-mono text-lg font-bold text-orange-accent bg-orange-light/60 px-4 py-2 rounded-xl">
+              01:00 PM
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-charcoal-900">Product Recommendations & Lunch Curation</h3>
+              <p class="text-sm text-charcoal-600 mt-1">
+                E-commerce and food delivery apps use collaborative filtering to surface personalized recommendations matching your exact preferences.
+              </p>
+            </div>
+          </div>
+          <div class="shrink-0 flex items-center gap-2">
+            <span class="px-3 py-1 bg-stone-100 text-charcoal-700 text-xs font-mono rounded-lg border border-stone-200">Recommendation Engines</span>
+          </div>
+        </div>
+
+        <!-- Timeline Item 4 -->
+        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-stone-200 shadow-sm hover:shadow-md hover:border-teal-500/40 transition-all duration-300 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+          <div class="flex items-center gap-4">
+            <div class="font-mono text-lg font-bold text-teal-accent bg-teal-light/60 px-4 py-2 rounded-xl">
+              06:00 PM
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-charcoal-900">AI Healthcare & Wearable Health Monitoring</h3>
+              <p class="text-sm text-charcoal-600 mt-1">
+                Smartwatches analyze real-time optical heart sensors to detect irregular arrhythmias and calculate workout metabolic efficiency.
+              </p>
+            </div>
+          </div>
+          <div class="shrink-0 flex items-center gap-2">
+            <span class="px-3 py-1 bg-stone-100 text-charcoal-700 text-xs font-mono rounded-lg border border-stone-200">Biometric Signal AI</span>
+          </div>
+        </div>
+
+        <!-- Timeline Item 5 -->
+        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-stone-200 shadow-sm hover:shadow-md hover:border-teal-500/40 transition-all duration-300 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+          <div class="flex items-center gap-4">
+            <div class="font-mono text-lg font-bold text-charcoal-900 bg-stone-200 px-4 py-2 rounded-xl">
+              10:00 PM
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-charcoal-900">Entertainment Streaming Recommendations</h3>
+              <p class="text-sm text-charcoal-600 mt-1">
+                Streaming platforms deploy deep vector embeddings to match your taste with new films, music playlists, and podcast episodes.
+              </p>
+            </div>
+          </div>
+          <div class="shrink-0 flex items-center gap-2">
+            <span class="px-3 py-1 bg-stone-100 text-charcoal-700 text-xs font-mono rounded-lg border border-stone-200">Vector Embeddings</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       06 — AI CONCEPTS (Vocabulary You Should Know)
+       ========================================================================= -->
+  <section class="py-20 lg:py-28 bg-cream-50 border-b border-stone-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cream-200 border border-stone-300 text-xs font-mono font-bold text-teal-accent uppercase mb-3">
+          LEXICON 06
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-bold text-charcoal-900 tracking-tight">
+          AI Vocabulary You Should Know
+        </h2>
+        <p class="mt-2 text-charcoal-600 text-base">
+          Interactive terminology cards to expand your technical vocabulary.
+        </p>
+      </div>
+
+      <!-- Grid of 8 Vocabulary Cards with hover:-translate-y-1 and transition -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- 1. Machine Learning -->
+        <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-teal-500/50 transition duration-200 flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-mono font-bold text-teal-accent uppercase block mb-2">Core Foundation</span>
+            <h3 class="text-lg font-bold text-charcoal-900 mb-2">Machine Learning</h3>
+            <p class="text-xs text-charcoal-600 leading-relaxed">
+              Algorithms that learn directly from historical data patterns without requiring explicit rule-by-rule programming.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono text-stone-400">
+            <span>Tag: ML</span>
+            <span class="text-teal-accent font-semibold">Basic</span>
+          </div>
+        </div>
+
+        <!-- 2. Deep Learning -->
+        <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-teal-500/50 transition duration-200 flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-mono font-bold text-teal-accent uppercase block mb-2">Subfield of ML</span>
+            <h3 class="text-lg font-bold text-charcoal-900 mb-2">Deep Learning</h3>
+            <p class="text-xs text-charcoal-600 leading-relaxed">
+              A specialized subset of ML using deep multi-layered neural networks inspired by biological synaptic pathways.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono text-stone-400">
+            <span>Tag: DL</span>
+            <span class="text-teal-accent font-semibold">Intermediate</span>
+          </div>
+        </div>
+
+        <!-- 3. Neural Networks -->
+        <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-teal-500/50 transition duration-200 flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-mono font-bold text-teal-accent uppercase block mb-2">Architecture</span>
+            <h3 class="text-lg font-bold text-charcoal-900 mb-2">Neural Networks</h3>
+            <p class="text-xs text-charcoal-600 leading-relaxed">
+              Interconnected computational nodes that process numerical input through weighted layers to calculate probabilities.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono text-stone-400">
+            <span>Tag: ANN</span>
+            <span class="text-teal-accent font-semibold">Intermediate</span>
+          </div>
+        </div>
+
+        <!-- 4. NLP -->
+        <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-teal-500/50 transition duration-200 flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-mono font-bold text-teal-accent uppercase block mb-2">Language</span>
+            <h3 class="text-lg font-bold text-charcoal-900 mb-2">NLP</h3>
+            <p class="text-xs text-charcoal-600 leading-relaxed">
+              Natural Language Processing allows machines to comprehend, translate, extract meaning, and generate human dialect.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono text-stone-400">
+            <span>Tag: Linguistics</span>
+            <span class="text-teal-accent font-semibold">Core</span>
+          </div>
+        </div>
+
+        <!-- 5. Computer Vision -->
+        <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-teal-500/50 transition duration-200 flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-mono font-bold text-orange-accent uppercase block mb-2">Perception</span>
+            <h3 class="text-lg font-bold text-charcoal-900 mb-2">Computer Vision</h3>
+            <p class="text-xs text-charcoal-600 leading-relaxed">
+              Enables computers to identify, classify, segment, and understand digital images and live video streams.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono text-stone-400">
+            <span>Tag: CV</span>
+            <span class="text-orange-accent font-semibold">Vision</span>
+          </div>
+        </div>
+
+        <!-- 6. Generative AI -->
+        <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-teal-500/50 transition duration-200 flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-mono font-bold text-orange-accent uppercase block mb-2">Synthesis</span>
+            <h3 class="text-lg font-bold text-charcoal-900 mb-2">Generative AI</h3>
+            <p class="text-xs text-charcoal-600 leading-relaxed">
+              Systems designed to produce novel original content—including text, photorealistic imagery, music, and source code.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono text-stone-400">
+            <span>Tag: GenAI</span>
+            <span class="text-orange-accent font-semibold">Modern</span>
+          </div>
+        </div>
+
+        <!-- 7. LLM -->
+        <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-teal-500/50 transition duration-200 flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-mono font-bold text-emerald-accent uppercase block mb-2">Transformers</span>
+            <h3 class="text-lg font-bold text-charcoal-900 mb-2">LLM</h3>
+            <p class="text-xs text-charcoal-600 leading-relaxed">
+              Large Language Models trained on massive text corpora to perform complex reasoning, summarization, and dialogue.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono text-stone-400">
+            <span>Tag: Scale</span>
+            <span class="text-emerald-accent font-semibold">Frontier</span>
+          </div>
+        </div>
+
+        <!-- 8. Robotics -->
+        <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-teal-500/50 transition duration-200 flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-mono font-bold text-emerald-accent uppercase block mb-2">Embodiment</span>
+            <h3 class="text-lg font-bold text-charcoal-900 mb-2">Robotics</h3>
+            <p class="text-xs text-charcoal-600 leading-relaxed">
+              The integration of machine learning with physical actuators, sensors, and kinematics for autonomous spatial action.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono text-stone-400">
+            <span>Tag: Physical</span>
+            <span class="text-emerald-accent font-semibold">Applied</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       07 — WHY LEARN AI? (Editorial Statement & 4 Pillars)
+       ========================================================================= -->
+  <section id="why-learn" class="py-20 lg:py-28 bg-cream-200/60 border-b border-stone-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Editorial Statement Banner -->
+      <div class="text-center max-w-4xl mx-auto mb-16 space-y-4">
+        <span class="text-xs font-mono font-bold tracking-widest text-teal-accent uppercase block">
+          PERSPECTIVE 07
+        </span>
+        <blockquote class="text-3xl sm:text-4xl lg:text-5xl font-serif italic text-charcoal-900 leading-tight">
+          “AI is not just a technology to use.<br>
+          <span class="text-teal-accent underline decoration-orange-accent/50 decoration-wavy">It is a technology to understand.</span>”
+        </blockquote>
+        <p class="text-sm font-mono text-charcoal-500 tracking-wider uppercase pt-2">
+          WHY UNDERSTANDING AI IS THE ESSENTIAL LITERACY OF OUR CENTURY
+        </p>
+      </div>
+
+      <!-- 4 Simple Content Blocks (Not large cards) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Pillar 1: Career -->
+        <div class="space-y-3 p-5 rounded-2xl bg-white border border-stone-200/80 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-teal-light text-teal-accent flex items-center justify-center font-mono font-bold text-sm">
+            01
+          </div>
+          <h3 class="text-xl font-bold text-charcoal-900">Career</h3>
+          <p class="text-sm text-charcoal-600 leading-relaxed">
+            AI skills create future career opportunities across every industry, from medicine to engineering and creative arts.
+          </p>
+        </div>
+
+        <!-- Pillar 2: Problem Solving -->
+        <div class="space-y-3 p-5 rounded-2xl bg-white border border-stone-200/80 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-emerald-light text-emerald-accent flex items-center justify-center font-mono font-bold text-sm">
+            02
+          </div>
+          <h3 class="text-xl font-bold text-charcoal-900">Problem Solving</h3>
+          <p class="text-sm text-charcoal-600 leading-relaxed">
+            AI helps solve complex, high-dimensional societal and scientific problems by identifying hidden patterns in big data.
+          </p>
+        </div>
+
+        <!-- Pillar 3: Automation -->
+        <div class="space-y-3 p-5 rounded-2xl bg-white border border-stone-200/80 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-orange-light text-orange-accent flex items-center justify-center font-mono font-bold text-sm">
+            03
+          </div>
+          <h3 class="text-xl font-bold text-charcoal-900">Automation</h3>
+          <p class="text-sm text-charcoal-600 leading-relaxed">
+            AI can automate repetitive, mundane tasks, freeing human intellect for strategic thinking, empathy, and creative innovation.
+          </p>
+        </div>
+
+        <!-- Pillar 4: Innovation -->
+        <div class="space-y-3 p-5 rounded-2xl bg-white border border-stone-200/80 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-stone-200 text-charcoal-800 flex items-center justify-center font-mono font-bold text-sm">
+            04
+          </div>
+          <h3 class="text-xl font-bold text-charcoal-900">Innovation</h3>
+          <p class="text-sm text-charcoal-600 leading-relaxed">
+            AI enables entirely new products, interfaces, and scientific discoveries that were previously impossible to engineer.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       08 — LEARNING PROGRESS (Your AI Journey)
+       ========================================================================= -->
+  <section class="py-20 lg:py-28 bg-cream-50 border-b border-stone-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Card Container -->
+      <div class="bg-white rounded-3xl p-8 sm:p-12 border border-stone-200 shadow-md">
+        
+        <!-- Header -->
+        <div class="flex flex-wrap items-center justify-between gap-4 mb-10 pb-6 border-b border-stone-100">
+          <div>
+            <span class="text-xs font-mono font-bold text-teal-accent uppercase tracking-wider block mb-1">
+              PROGRESS TRACKER 08
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-charcoal-900">
+              Your AI Journey
+            </h2>
+          </div>
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cream-200 text-xs font-mono font-bold text-charcoal-800 border border-stone-300">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            OVERALL STATUS: 41% COMPLETE
+          </div>
+        </div>
+
+        <!-- Progress Items List -->
+        <div class="space-y-8">
+          
+          <!-- Item 1: AI Fundamentals (Completed) -->
+          <div class="space-y-2">
+            <div class="flex items-center justify-between text-sm">
+              <div class="flex items-center gap-3 font-semibold text-charcoal-900">
+                <span class="w-6 h-6 rounded-full bg-emerald-light text-emerald-800 flex items-center justify-center text-xs font-bold">✓</span>
+                <span>AI Fundamentals</span>
+              </div>
+              <span class="text-xs font-mono font-bold text-emerald-accent uppercase">Completed (100%)</span>
+            </div>
+            <!-- Progress Bar -->
+            <div class="w-full bg-stone-100 rounded-full h-2.5 overflow-hidden">
+              <div class="bg-emerald-accent h-2.5 rounded-full w-full"></div>
+            </div>
+          </div>
+
+          <!-- Item 2: Machine Learning (In Progress) -->
+          <div class="space-y-2">
+            <div class="flex items-center justify-between text-sm">
+              <div class="flex items-center gap-3 font-semibold text-charcoal-900">
+                <span class="w-6 h-6 rounded-full bg-teal-light text-teal-accent flex items-center justify-center text-xs font-bold">◐</span>
+                <span>Machine Learning</span>
+              </div>
+              <span class="text-xs font-mono font-bold text-teal-accent uppercase">In Progress (65%)</span>
+            </div>
+            <!-- Progress Bar -->
+            <div class="w-full bg-stone-100 rounded-full h-2.5 overflow-hidden">
+              <div class="bg-teal-accent h-2.5 rounded-full w-[65%]"></div>
+            </div>
+          </div>
+
+          <!-- Item 3: Deep Learning (Locked) -->
+          <div class="space-y-2 opacity-60">
+            <div class="flex items-center justify-between text-sm">
+              <div class="flex items-center gap-3 font-semibold text-charcoal-700">
+                <span class="w-6 h-6 rounded-full bg-stone-200 text-charcoal-500 flex items-center justify-center text-xs font-bold">○</span>
+                <span>Deep Learning</span>
+              </div>
+              <span class="text-xs font-mono font-bold text-stone-500 uppercase">Locked</span>
+            </div>
+            <!-- Progress Bar -->
+            <div class="w-full bg-stone-100 rounded-full h-2.5 overflow-hidden">
+              <div class="bg-stone-300 h-2.5 rounded-full w-0"></div>
+            </div>
+          </div>
+
+          <!-- Item 4: Generative AI (Locked) -->
+          <div class="space-y-2 opacity-60">
+            <div class="flex items-center justify-between text-sm">
+              <div class="flex items-center gap-3 font-semibold text-charcoal-700">
+                <span class="w-6 h-6 rounded-full bg-stone-200 text-charcoal-500 flex items-center justify-center text-xs font-bold">○</span>
+                <span>Generative AI</span>
+              </div>
+              <span class="text-xs font-mono font-bold text-stone-500 uppercase">Locked</span>
+            </div>
+            <!-- Progress Bar -->
+            <div class="w-full bg-stone-100 rounded-full h-2.5 overflow-hidden">
+              <div class="bg-stone-300 h-2.5 rounded-full w-0"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Footer Note -->
+        <div class="mt-10 pt-6 border-t border-stone-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-charcoal-500 font-mono">
+          <span>Current Topic: Supervised Learning & Decision Trees</span>
+          <a href="#learning-path" class="text-teal-accent hover:underline font-bold uppercase">Continue Learning Session →</a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       FINAL CTA (Beautiful Contrasting Dark Section)
+       ========================================================================= -->
+  <section class="py-24 bg-charcoal-900 text-white relative overflow-hidden bg-grid-pattern-dark">
+    
+    <!-- Ambient Glow Circles -->
+    <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-teal-500/10 blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-orange-500/10 blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-8">
+      
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-stone-800/80 border border-stone-700 text-xs font-mono font-bold text-teal-400 uppercase tracking-widest">
+        <span class="w-2 h-2 rounded-full bg-teal-400"></span>
+        YOUR ODYSSEY STARTS NOW
+      </div>
+
+      <div class="space-y-3">
+        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
+          The Future Doesn't Wait.
+        </h2>
+        <p class="text-2xl sm:text-3xl font-serif italic text-teal-300">
+          Start Understanding AI Today.
+        </p>
+      </div>
+
+      <p class="text-base sm:text-lg text-stone-300 max-w-2xl mx-auto font-normal leading-relaxed">
+        “Begin with the basics, explore the concepts and slowly build your understanding of Artificial Intelligence.”
+      </p>
+
+      <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#hero" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-teal-accent hover:bg-teal-hover text-white px-9 py-4 rounded-xl font-bold text-base shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+          <span>Start My AI Journey</span>
+          <span>→</span>
+        </a>
+        <a href="#what-is-ai" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-stone-800/80 hover:bg-stone-800 text-stone-200 border border-stone-700 px-7 py-4 rounded-xl font-semibold text-base transition-colors">
+          <span>Explore Articles</span>
+        </a>
+      </div>
+
+      <div class="pt-8 flex items-center justify-center gap-8 text-xs text-stone-400 font-mono">
+        <span>No Credit Card Required</span>
+        <span>•</span>
+        <span>100% Free Open Platform</span>
+        <span>•</span>
+        <span>Beginner Friendly</span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="bg-cream-200 border-t border-stone-300/80 py-16 text-charcoal-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-12 border-b border-stone-300/70">
+        
+        <!-- Brand Info -->
+        <div class="md:col-span-5 space-y-4">
+          <a href="#hero" class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-charcoal-900 text-white flex items-center justify-center font-mono font-bold text-base border border-teal-500/40">
+              <span class="text-teal-400">AI</span>
+            </div>
+            <span class="font-bold text-xl tracking-tight text-charcoal-900">
+              AI ODYSSEY
+            </span>
+          </a>
+          <p class="text-base font-serif italic text-charcoal-800">
+            Understand AI. Explore the Future.
+          </p>
+          <p class="text-xs text-charcoal-500 leading-relaxed max-w-sm">
+            An editorial learning initiative dedicated to making complex artificial intelligence concepts accessible, engaging, and intuitive for everyday learners.
+          </p>
+        </div>
+
+        <!-- Links Column 1 -->
+        <div class="md:col-span-3 space-y-3">
+          <h4 class="font-mono text-xs font-bold text-charcoal-900 uppercase tracking-wider">Navigation</h4>
+          <ul class="space-y-2 text-sm text-charcoal-600">
+            <li><a href="#hero" class="hover:text-teal-accent transition-colors">Home</a></li>
+            <li><a href="#what-is-ai" class="hover:text-teal-accent transition-colors">What is AI?</a></li>
+            <li><a href="#types-of-ai" class="hover:text-teal-accent transition-colors">Types of AI</a></li>
+            <li><a href="#learning-path" class="hover:text-teal-accent transition-colors">Learning Path</a></li>
+            <li><a href="#ai-around-us" class="hover:text-teal-accent transition-colors">AI Around Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 2 -->
+        <div class="md:col-span-4 space-y-3">
+          <h4 class="font-mono text-xs font-bold text-charcoal-900 uppercase tracking-wider">About Project</h4>
+          <ul class="space-y-2 text-sm text-charcoal-600">
+            <li><a href="#what-is-ai" class="hover:text-teal-accent transition-colors">About AI Odyssey</a></li>
+            <li><a href="#why-learn" class="hover:text-teal-accent transition-colors">Why Learn AI?</a></li>
+            <li><a href="#learning-path" class="hover:text-teal-accent transition-colors">Curriculum Roadmap</a></li>
+            <li><a href="#hero" class="hover:text-teal-accent transition-colors">Contact & Feedback</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright & Bottom Meta -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-charcoal-500 font-mono">
+        <p>© 2026 AI Odyssey. All rights reserved.</p>
+        <p>Built with HTML + Tailwind CSS. Designed for modern curious minds.</p>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>

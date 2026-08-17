@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Frontend Learning</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7fb;
+            color: #222;
+        }
+
+        header {
+            background: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 16px;
+            color: #cbd5e1;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 26px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .card p {
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .card a {
+            display: inline-block;
+            text-decoration: none;
+            background: #1e293b;
+            color: white;
+            padding: 10px 22px;
+            border-radius: 8px;
+        }
+
+        .card a:hover {
+            background: #334155;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+            background: #1e293b;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Frontend Learning</h1>
+        <p>Explore my learning journey in Web Development</p>
+    </header>
+
+    <div class="container">
+
+        <h2>Learning Topics</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>HTML</h3>
+                <p>Learn HTML basics and web page structure.</p>
+                <a href="HTML/">Explore HTML</a>
+            </div>
+
+            <div class="card">
+                <h3>CSS</h3>
+                <p>Learn styling, layouts and responsive design.</p>
+                <a href="CSS/">Explore CSS</a>
+            </div>
+
+            <div class="card">
+                <h3>Bootstrap</h3>
+                <p>Practice Bootstrap components and utilities.</p>
+                <a href="BS/">Explore Bootstrap</a>
+            </div>
+
+
+            <div class="card">
+                <h3>JavaScript</h3>
+                <p>Learn JavaScript basics and assignments.</p>
+                <a href="JS/">Explore JavaScript</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>My Frontend Learning Journey</p>
+    </footer>
+
+</body>
+</html>

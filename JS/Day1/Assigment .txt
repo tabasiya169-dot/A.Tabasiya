@@ -1,0 +1,204 @@
+TASK:
+
+1. var userName = "Tabasiya";
+2. var studentName = "Sameera";
+3. var firstName = "Aslam";
+4. var lastName = "Basha";
+5. var phoneNumber = "9876543210";
+6. var emailAddress = "abc@gmail.com";
+7. var collegeName = "SMIT";
+8. var schoolName = "Stann's Matriculation School";
+9. var cityName = "Chennai";
+10. var stateName = "Tamil Nadu";
+11. var countryName = "India";
+12. var ageValue = 21;
+13. var studentAge = 20;
+14. var totalMarks = 450;
+15. var examMark = 85;
+16. var subjectName = "JavaScript";
+17. var courseName = "Web Development";
+18. var courseDuration = 6;
+19. var companyName = "Zoho Solutions";
+20. var employeeName = "Ram";
+21. var employeeId = 101;
+22. var jobRole = "Developer";
+23. var salaryAmount = 25000;
+24. var departmentName = "IT";
+25. var productName = "Laptop";
+26. var productPrice = 50000;
+27. var quantityValue = 5;
+28. var totalPrice = 2500;
+29. var favoriteColor = "Blue";
+30. var favoriteFood = "Biryani";
+31. var homeTown = "Mangadu";
+32. var streetName = "Main Road";
+33. var houseNumber = 25;
+34. var doorNumber = 12;
+35. var accountBalance = 5000;
+36. var bankName = "ABC Bank";
+37. var userAddress = "Chennai";
+38. var loginStatus = true;
+39. var orderNumber = 1001;
+40. var websiteName = "Learning Plateform";
+41. var pageTitle = "Home Page";
+42. var languageName = "JavaScript";
+43. var browserName = "Chrome";
+44. var favoritegame = "Cricket";
+45. var currentTime = "10:30 AM";
+46. var weatherStatus = "Sunny";
+47. var monthName = "August";
+48. var yearValue = 2026;
+
+
+1. let userAge = 21;
+2. let studentAge = 20;
+3. let currentCity = "Chennai";
+4. let currentState = "Tamil Nadu";
+5. let mobileNumber = "9876543210";
+6. let emailId = "tabas@gmail.com";
+7. let totalScore = 450;
+8. let heighestScore = 90;
+9. let passingMark = 40;
+10. let maxMarks = 100;
+11. let subjectCode = "JS101";
+12. let courseCode = "full Stack";
+13. let learningTime = 2;
+14. let availableSeats = 25;
+15. let roomNumber = 101;
+16. let floorNumber = 3;
+17. let tableNumber = 10;
+18. let productQuantity = 5;
+19. let productCost = 1500;
+20. let discountAmount = 200;
+21. let finalAmount = 1300;
+22. let employeeCode = 501;
+23. let employeeRole = "Developer";
+24. let workingHours = 8;
+25. let breakTime = 1;
+26. let companyLocation = "Chennai";
+27. let projectName = "AI Project";
+28. let projectStatus = "Running";
+29. let taskCount = 10;
+30. let completedTasks = 6;
+31. let pendingTasks = 4;
+32. let loginCount = 2;
+33. let attemptCount = 3;
+34. let scoreValue = 90;
+35. let gameLevel = 5;
+36. let playerName = "Arun";
+37. let playerScore = 120;
+38. let cartItems = 4;
+39. let deliveryStatus = "Pending";
+40. let orderStatus = "Confirmed";
+41. let temperatureValue = 30;
+42. let currentMonth = "August";
+43. let currentDay = 17;
+44. let pageNumber = 2;
+45. let messageCount = 15;
+46. let notificationCount = 3;
+47. let batteryLevel = 80;
+48. let studyHours = 4;
+
+
+1. const userId = 101;
+2. const studentId = 202;
+3. const collegeCode = "SMIT";
+4. const schoolCode = "ABC101";
+5. const countryCode = "IN";
+6. const stateCode = "TN";
+7. const phoneCode = "+91";
+8. const playerScore = 240;
+9. const maxValue = 100;
+10. const minValue = 0;
+11. const passingScore = 40;
+12. const birthYear = 2005;
+13. const currentYear = 2026;
+14. const companyCode = "ABC01";
+15. const departmentCode = "ECE";
+16. const courseCode = "JS101";
+17. const subjectCode = "WEB01";
+18. const websiteName = "AI LearnHub";
+19. const appName = "Peerup";
+20. const languageName = "JavaScript";
+21. const frameworkName = "Bootstrap";
+22. const databaseName = "MySQL";
+23. const browserName = "Chrome";
+24. const operatingSystem = "Windows";
+25. const companyLocation = "Chennai";
+26. const officeNumber = 101;
+27. const roomCode = "R101";
+28. const floorCode = "F03";
+29. const bankName = "ABC Bank";
+30. const bankCode = "ABC001";
+31. const accountType = "Savings";
+32. const currencyCode = "INR";
+33. const currencySymbol = "₹";
+34. const countryName = "India";
+35. const stateName = "Tamil Nadu";
+36. const cityName = "Chennai";
+37. const collegeName = "SMIT";
+38. const degreeName = "ECE";
+39. const projectTitle = "Smart System";
+40. const projectCode = "PRJ101";
+41. const apiVersion = "v1";
+42. const versionNumber = "1.0";
+43. const defaultLanguage = "English";
+44. const defaultTheme = "Light";
+45. const websiteUrl = "example.com";
+46. const supportEmail = "support@gmail.com";
+47. const supportNumber = "1234567899";
+48. const appVersion = "2.0";
+
+
+
+INTERVIEW QUESTIONS:
+
+
+1. What is JavaScript?
+
+JavaScript is a programming language used to make web pages interactive and dynamic.
+
+2. What is a variable?
+
+A variable is a named container used to store data or values in a program.
+
+3. What is variable declaration?
+
+Variable declaration means creating a variable using keywords like var, let, or const.
+
+4. What is initialization?
+
+Initialization means assigning an initial value to a variable when it is created.
+
+5. What is an assignment operator?
+
+An assignment operator (=) is used to assign a value to a variable.
+
+Example:
+let age = 21;
+
+6. What are var, let and const?
+
+var, let, and const are keywords used the declare variables in JavaScript.
+Ex:
+var name = "Arun";
+let age = 21;
+const pi = 3.14;
+
+7. What is the difference between var, let and const?
+
+var can be redeclared and reassigned.
+let can be reassigned but cannot be redeclared in the same scope.
+const cannot be reassigned or redeclared.
+
+8. What is ES6?
+
+ES6 stands for ECMAScript 2015. It is a major version of JavaScript that introduced features like let, const, arrow functions, classes, and template literals.
+
+9. What is a JavaScript Engine?
+
+A JavaScript Engine is a program that reads, interprets, and executes JavaScript code.
+
+10. What is V8?
+
+V8 is a JavaScript Engine developed by Google. It is used in Google Chrome and Node.js to execute JavaScript code.

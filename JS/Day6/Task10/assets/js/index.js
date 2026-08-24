@@ -1,0 +1,9 @@
+let text = "javascript";
+let target = "s";
+
+for (let i = 0; i < text.length; i++) {
+    if (text[i] === target) {
+        console.log("Character Found:", text[i]);
+        break;
+    }
+}

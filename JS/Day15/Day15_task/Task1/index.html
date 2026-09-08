@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Hide Content</title>
+
+    <style>
+        .para {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+
+        .para.show {
+            max-height: 100px;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Show and Hide Content</h2>
+
+    <p id="para" class="para">
+        This is show and hide paragraph content.
+    </p>
+
+    <button id="btn">Show Content</button>
+
+    <script src="assets/js/index.js"></script>
+
+</body>
+</html>

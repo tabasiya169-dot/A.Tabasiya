@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Card Toggle</title>
+
+    <style>
+        .card {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .details {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+
+        .details.show {
+            max-height: 150px;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Smooth Card Toggle</h2>
+
+    <div class="card">
+
+        <img src="assets/image/img_1.jpg" alt="Sample Image">
+
+        <h3>Learning JavaScript</h3>
+
+        <p>
+            JavaScript is used to create interactive web pages.
+        </p>
+
+        <div id="details" class="details">
+            <p>
+                JS helps us to add dynamic behaviour
+                and interactivity to websites.
+            </p>
+        </div>
+
+        <button id="detailsBtn">Show Details</button>
+
+    </div>
+
+    <script src="assets/js/index.js"></script>
+
+</body>
+</html>

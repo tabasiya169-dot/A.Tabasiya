@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Leftover Food Donation Platform - Connect food donors with local shelters, volunteers, and individuals to reduce food waste and fight hunger.">
+  <title>Leftover Food Donation Platform | Reduce Food Waste & Share Meals</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-emerald-800 text-emerald-100 text-xs py-2 px-4 text-center font-medium flex items-center justify-center gap-2">
+    <span class="pulse-dot"></span>
+    <span><strong>Live Impact:</strong> Every cooked meal shared today prevents greenhouse gas emissions and feeds a neighbor in need.</span>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-custom">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="brand-logo">
+          <div class="brand-icon-box">
+            <i class="bi bi-heart-fill"></i>
+          </div>
+          <div>
+            <div class="brand-title">FoodBridge</div>
+            <div class="brand-subtitle">Leftover Food Donation</div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
+          <a href="index.html" class="nav-link-custom active">
+            <i class="bi bi-house-door"></i> Home
+          </a>
+          <a href="about.html" class="nav-link-custom">
+            <i class="bi bi-info-circle"></i> About
+          </a>
+          <a href="donate.html" class="nav-link-custom">
+            <i class="bi bi-plus-circle"></i> Donate Food
+          </a>
+          <a href="available.html" class="nav-link-custom">
+            <i class="bi bi-box-seam"></i> Available Food
+          </a>
+          <a href="food-info.html" class="nav-link-custom">
+            <i class="bi bi-journal-text"></i> Food Information
+          </a>
+          <a href="dashboard.html" class="nav-link-custom">
+            <i class="bi bi-grid-1x2"></i> Dashboard
+          </a>
+        </nav>
+
+        <!-- Right Header Action -->
+        <div class="hidden lg:flex items-center gap-3">
+          <a href="donate.html" class="btn-primary-custom text-sm">
+            <i class="bi bi-gift-fill"></i> Donate Now
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex md:hidden">
+          <button id="mobile-menu-toggle" type="button" class="p-2 rounded-lg text-slate-600 hover:text-emerald-600 hover:bg-slate-100 focus:outline-none">
+            <i class="bi bi-list text-2xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-1">
+      <a href="index.html" class="block nav-link-custom active">
+        <i class="bi bi-house-door"></i> Home
+      </a>
+      <a href="about.html" class="block nav-link-custom">
+        <i class="bi bi-info-circle"></i> About
+      </a>
+      <a href="donate.html" class="block nav-link-custom">
+        <i class="bi bi-plus-circle"></i> Donate Food
+      </a>
+      <a href="available.html" class="block nav-link-custom">
+        <i class="bi bi-box-seam"></i> Available Food
+      </a>
+      <a href="food-info.html" class="block nav-link-custom">
+        <i class="bi bi-journal-text"></i> Food Information
+      </a>
+      <a href="dashboard.html" class="block nav-link-custom">
+        <i class="bi bi-grid-1x2"></i> Dashboard
+      </a>
+      <div class="pt-2">
+        <a href="donate.html" class="w-full btn-primary-custom text-center text-sm py-2">
+          <i class="bi bi-gift-fill"></i> Donate Now
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-gradient-bg py-16 lg:py-24 border-b border-emerald-100/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 space-y-6">
+          <div class="hero-badge">
+            <i class="bi bi-shield-check text-emerald-600"></i>
+            <span>Zero Food Waste • Safe Community Sharing</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
+            Turn <span class="text-emerald-600">Surplus Leftovers</span> into Community Smiles.
+          </h1>
+
+          <p class="text-lg sm:text-xl text-slate-600 leading-relaxed font-normal">
+            Every day, perfectly safe, delicious cooked meals from family dinners, parties, and cafeterias go unused. Our platform instantly connects generous donors with nearby volunteers, shelters, and families in need.
+          </p>
+
+          <!-- Call to action buttons -->
+          <div class="flex flex-wrap items-center gap-4 pt-4">
+            <a href="donate.html" id="hero-donate-btn" class="btn-primary-custom text-base px-6 py-3">
+              <i class="bi bi-bag-plus-fill"></i> Donate Leftover Food
+            </a>
+            <a href="available.html" id="hero-available-btn" class="btn-secondary-custom text-base px-6 py-3">
+              <i class="bi bi-search"></i> View Available Food
+            </a>
+            <a href="dashboard.html" id="hero-dashboard-btn" class="btn-accent-custom text-base px-6 py-3">
+              <i class="bi bi-speedometer2"></i> Live Impact
+            </a>
+          </div>
+
+          <!-- Feature Highlights Bar -->
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-200/80">
+            <div class="flex items-center gap-2 text-slate-700 text-sm font-semibold">
+              <i class="bi bi-clock-history text-emerald-600 text-lg"></i>
+              <span>Rapid 1-Hr Match</span>
+            </div>
+            <div class="flex items-center gap-2 text-slate-700 text-sm font-semibold">
+              <i class="bi bi-shield-lock text-emerald-600 text-lg"></i>
+              <span>Food Safety Check</span>
+            </div>
+            <div class="flex items-center gap-2 text-slate-700 text-sm font-semibold">
+              <i class="bi bi-geo-alt text-emerald-600 text-lg"></i>
+              <span>Hyperlocal Pickup</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Card / Illustration Showcase -->
+        <div class="lg:col-span-5">
+          <div class="relative">
+            <div class="bg-white rounded-3xl p-6 shadow-2xl border border-emerald-100 space-y-5">
+              <div class="relative rounded-2xl overflow-hidden h-56 bg-slate-100">
+                <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=80" alt="Food Sharing" class="w-full h-full object-fit-cover">
+                <div class="absolute bottom-3 left-3 bg-emerald-900/90 text-white backdrop-blur-md px-3 py-1.5 rounded-full text-xs font-semibold flex items-center gap-2">
+                  <span class="pulse-dot"></span> Live Donations Active
+                </div>
+              </div>
+
+              <!-- Quick Live API Preview Widget -->
+              <div id="hero-weather-ticker" class="bg-slate-50 rounded-xl p-4 border border-slate-200 text-sm space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Live Weather & Safety Check (API)</span>
+                  <span id="hero-weather-badge" class="badge-custom badge-available">Fetching...</span>
+                </div>
+                <div id="hero-weather-content" class="text-slate-700 font-medium">
+                  Loading real-time pickup conditions...
+                </div>
+              </div>
+
+              <!-- Quick Action Banner -->
+              <div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 flex items-center justify-between">
+                <div>
+                  <div class="text-xs font-bold text-emerald-800 uppercase">Have Cooked Food Right Now?</div>
+                  <div class="text-xs text-emerald-600">Post in under 2 minutes</div>
+                </div>
+                <a href="donate.html" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-3 py-2 rounded-lg transition-colors">
+                  Post Donation &rarr;
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Real-Time Statistics Section -->
+  <section class="py-12 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Real-Time Community Impact</h2>
+        <p class="text-sm sm:text-base text-slate-600 mt-2">Dynamically calculated from all active donations and completed pickups in our system.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Stat Card 1 -->
+        <div class="stat-counter-card">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold uppercase text-slate-400">Total Donated</span>
+            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg">
+              <i class="bi bi-box-seam-fill"></i>
+            </div>
+          </div>
+          <div id="home-stat-donations" class="stat-number text-emerald-600">--</div>
+          <div class="stat-label">Food Donations Registered</div>
+        </div>
+
+        <!-- Stat Card 2 -->
+        <div class="stat-counter-card">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold uppercase text-slate-400">People Helped</span>
+            <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-lg">
+              <i class="bi bi-people-fill"></i>
+            </div>
+          </div>
+          <div id="home-stat-people" class="stat-number text-amber-600">--</div>
+          <div class="stat-label">Estimated Meals Served</div>
+        </div>
+
+        <!-- Stat Card 3 -->
+        <div class="stat-counter-card">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold uppercase text-slate-400">Active Available</span>
+            <div class="w-10 h-10 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-lg">
+              <i class="bi bi-clock-fill"></i>
+            </div>
+          </div>
+          <div id="home-stat-active" class="stat-number text-teal-600">--</div>
+          <div class="stat-label">Meals Ready for Pickup</div>
+        </div>
+
+        <!-- Stat Card 4 -->
+        <div class="stat-counter-card">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold uppercase text-slate-400">Waste Prevented</span>
+            <div class="w-10 h-10 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center text-lg">
+              <i class="bi bi-recycle"></i>
+            </div>
+          </div>
+          <div id="home-stat-waste" class="stat-number text-rose-600">--</div>
+          <div class="stat-label">Kg of Food Saved</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="py-16 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <div class="badge-custom badge-available">Simple & Reliable</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">How the Platform Works</h2>
+        <p class="text-base text-slate-600">A streamlined 4-step pipeline ensuring leftover food is securely listed, safely handled, and quickly delivered.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Step 1 -->
+        <div class="feature-card">
+          <div class="card-icon-wrapper icon-emerald">
+            <i class="bi bi-pencil-square"></i>
+          </div>
+          <div class="text-xs font-bold text-emerald-600 uppercase mb-1">Step 1</div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Post Leftover Food</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Fill our simple donation form with meal name, category, quantity, preparation time, and exact pickup location.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="feature-card">
+          <div class="card-icon-wrapper icon-amber">
+            <i class="bi bi-shield-check"></i>
+          </div>
+          <div class="text-xs font-bold text-amber-600 uppercase mb-1">Step 2</div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Safety Verification</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Our platform checks safety guidelines and temperature windows to guarantee clean, safe food for recipients.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="feature-card">
+          <div class="card-icon-wrapper icon-teal">
+            <i class="bi bi-bell-fill"></i>
+          </div>
+          <div class="text-xs font-bold text-teal-600 uppercase mb-1">Step 3</div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Claim & Coordinate</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Local shelter volunteers or needy individuals browse listings and request pickup with their contact details.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="feature-card">
+          <div class="card-icon-wrapper icon-rose">
+            <i class="bi bi-heart-fill"></i>
+          </div>
+          <div class="text-xs font-bold text-rose-600 uppercase mb-1">Step 4</div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Nourish & Complete</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            The donor hands over the meal. The donation status updates to Completed, updating community statistics.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Available Food Section (Dynamic Cards) -->
+  <section class="py-16 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <div class="badge-custom badge-available mb-2">Ready for Handover</div>
+          <h2 class="text-3xl font-extrabold text-slate-900">Featured Available Food</h2>
+          <p class="text-sm sm:text-base text-slate-600 mt-1">Recently donated fresh cooked meals looking for pickup.</p>
+        </div>
+        <div>
+          <a href="available.html" class="btn-secondary-custom text-sm">
+            View All Food Listings <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Food Cards Grid (Injected via JS) -->
+      <div id="featured-food-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Rendered dynamically by js/index.js -->
+        <div class="col-span-full text-center py-12 text-slate-500">
+          <div class="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full border-emerald-500 border-t-transparent"></div>
+          <p class="mt-3 text-sm">Loading available food donations...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Educational Articles Section -->
+  <section class="py-16 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <div class="badge-custom badge-available">Awareness & Guidelines</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Why Food Sharing Matters</h2>
+        <p class="text-base text-slate-600">Educational articles on hunger alleviation, safe food handling, and sustainable community action.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Article 1 -->
+        <article class="article-card">
+          <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=600&q=80" alt="Food Waste Crisis" class="article-image">
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex items-center gap-2 text-xs font-bold text-emerald-600 uppercase mb-2">
+              <i class="bi bi-globe"></i> Global Impact
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">The Food Waste Paradox: Why Sharing Leftovers Matters</h3>
+            <p class="text-sm text-slate-600 leading-relaxed mb-4 flex-grow">
+              Over one-third of all food produced globally is wasted, while millions face daily food insecurity. Sharing surplus cooked food bridges this divide directly at the neighborhood level.
+            </p>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span>5 min read</span>
+              <a href="about.html" class="text-emerald-600 font-bold hover:underline">Learn More &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="article-card">
+          <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80" alt="Safe Cooking" class="article-image">
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex items-center gap-2 text-xs font-bold text-amber-600 uppercase mb-2">
+              <i class="bi bi-shield-check"></i> Safety First
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">The 2-Hour Rule: How to Donate Food Safely</h3>
+            <p class="text-sm text-slate-600 leading-relaxed mb-4 flex-grow">
+              Learn the critical rules of cooked food donation: cool food quickly, use food-grade containers, label ingredients clearly, and maintain the safe 2-hour room temperature limit.
+            </p>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span>4 min read</span>
+              <a href="about.html#safety-rules" class="text-emerald-600 font-bold hover:underline">Safety Guide &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="article-card">
+          <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb9?auto=format&fit=crop&w=600&q=80" alt="Community Charity" class="article-image">
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex items-center gap-2 text-xs font-bold text-teal-600 uppercase mb-2">
+              <i class="bi bi-heart"></i> Community Hope
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">From Extra Food to Extra Hope: Small Steps, Huge Change</h3>
+            <p class="text-sm text-slate-600 leading-relaxed mb-4 flex-grow">
+              Whether it is 5 extra rotis from dinner or 20 lunch boxes from a family birthday, every single donation counts toward zero hunger in our local communities.
+            </p>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span>3 min read</span>
+              <a href="about.html" class="text-emerald-600 font-bold hover:underline">Read Stories &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Call to Action -->
+  <section class="py-16 bg-gradient-to-br from-emerald-900 via-emerald-800 to-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-3xl mx-auto text-emerald-400">
+        <i class="bi bi-people-fill"></i>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold max-w-2xl mx-auto">Ready to Make a Difference in Your Neighborhood?</h2>
+      <p class="text-emerald-200 max-w-xl mx-auto text-base">
+        Join our growing network of compassionate donors, volunteer drivers, and community shelters. Reduce waste, feed families, and spread kindness.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 pt-4">
+        <a href="donate.html" class="btn-primary-custom px-8 py-3.5 text-base">
+          <i class="bi bi-plus-circle"></i> Donate Surplus Food
+        </a>
+        <a href="available.html" class="btn-secondary-custom px-8 py-3.5 text-base">
+          <i class="bi bi-box-seam"></i> Request Available Food
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-custom py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        
+        <!-- Brand Summary -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="brand-icon-box" style="width: 36px; height: 36px; font-size: 18px;">
+              <i class="bi bi-heart-fill"></i>
+            </div>
+            <span class="text-white font-extrabold text-lg">FoodBridge</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            A front-end platform bridging surplus cooked food with people who need it. Committed to Zero Waste and Zero Hunger.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Mission</a></li>
+            <li><a href="donate.html" class="footer-link">Donate Food</a></li>
+            <li><a href="available.html" class="footer-link">Available Listings</a></li>
+          </ul>
+        </div>
+
+        <!-- Information & Tools -->
+        <div>
+          <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Resources & APIs</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="food-info.html" class="footer-link">Nutrition & Recipe Dashboard</a></li>
+            <li><a href="dashboard.html" class="footer-link">Community Stats & Weather</a></li>
+            <li><a href="about.html#safety-rules" class="footer-link">Food Safety Handbook</a></li>
+          </ul>
+        </div>
+
+        <!-- Emergency / Volunteer Helpline -->
+        <div>
+          <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Helpline & Support</h4>
+          <p class="text-xs text-slate-400 mb-3">Volunteers ready 24/7 for urgent surplus pickups.</p>
+          <div class="text-emerald-400 font-bold text-sm">
+            <i class="bi bi-telephone-fill mr-1"></i> 1800-FOOD-BRIDGE
+          </div>
+          <div class="text-slate-400 text-xs mt-1">support@foodbridge-community.org</div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>© 2026 Leftover Food Donation Platform. Built with Vanilla JS, HTML5, CSS3, Bootstrap & Tailwind CSS.</div>
+        <div class="flex gap-4">
+          <a href="about.html" class="footer-link">Privacy</a>
+          <a href="about.html" class="footer-link">Terms</a>
+          <a href="dashboard.html" class="footer-link">System Status</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/common.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

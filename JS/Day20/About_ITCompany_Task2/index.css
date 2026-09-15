@@ -1,0 +1,244 @@
+/* ==========================================================================
+   IT AFTER 3 YEARS: SPECIAL RESEARCH REPORT & CHENNAI PERSPECTIVE
+   Custom Editorial Stylesheet
+   Palette: Charcoal, Warm Ivory, Muted Terracotta/Copper, Sage/Olive
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-charcoal-dark: #0f1216;
+  --color-charcoal-base: #15191f;
+  --color-charcoal-surface: #1e232b;
+  --color-charcoal-border: #2c333e;
+  
+  --color-ivory-light: #fdfbf7;
+  --color-ivory-warm: #f4efe6;
+  --color-ivory-muted: #e7dfd1;
+  
+  --color-copper-base: #c86034;
+  --color-copper-hover: #de7343;
+  --color-copper-soft: rgba(200, 96, 52, 0.12);
+  --color-copper-border: rgba(200, 96, 52, 0.35);
+
+  --color-sage-base: #4f6d60;
+  --color-sage-light: #709383;
+  --color-sage-soft: rgba(79, 109, 96, 0.15);
+
+  --color-ochre-base: #c29547;
+  
+  --font-serif: 'Newsreader', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Space Grotesk', monospace;
+}
+
+/* Base resets & typography defaults */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--color-charcoal-dark);
+  color: var(--color-ivory-warm);
+}
+
+body {
+  overflow-x: hidden;
+  line-height: 1.65;
+  letter-spacing: -0.01em;
+}
+
+/* Custom Typography Utilities */
+.font-editorial {
+  font-family: var(--font-serif);
+}
+
+.font-tech {
+  font-family: var(--font-mono);
+}
+
+.font-sans-clean {
+  font-family: var(--font-sans);
+}
+
+/* Subtle Editorial Background Grid & Texture */
+.bg-editorial-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+}
+
+.bg-editorial-dots {
+  background-size: 24px 24px;
+  background-image: radial-gradient(rgba(200, 96, 52, 0.15) 1px, transparent 1px);
+}
+
+/* Light ivory editorial paper section styling */
+.paper-section {
+  background-color: var(--color-ivory-warm);
+  color: var(--color-charcoal-dark);
+  border-top: 2px solid var(--color-copper-base);
+  border-bottom: 2px solid var(--color-copper-base);
+}
+
+/* Editorial rule lines */
+.editorial-rule {
+  height: 1px;
+  background: linear-gradient(90deg, var(--color-copper-base) 0%, rgba(200, 96, 52, 0.2) 60%, transparent 100%);
+}
+
+.editorial-rule-center {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(200, 96, 52, 0.4) 50%, transparent 100%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-charcoal-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2b333f;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-copper-base);
+}
+
+/* Navigation active indicator */
+.nav-link {
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-copper-base);
+  transition: width 0.3s ease;
+}
+
+.nav-link.active {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Interactive Timeline Card States */
+.timeline-btn {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid var(--color-charcoal-border);
+}
+
+.timeline-btn:hover {
+  border-color: var(--color-copper-base);
+}
+
+.timeline-btn.active-stage {
+  background-color: var(--color-charcoal-surface);
+  border-color: var(--color-copper-base);
+  box-shadow: 0 0 0 1px var(--color-copper-base), 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.timeline-btn.active-stage .stage-badge {
+  background-color: var(--color-copper-base);
+  color: #ffffff;
+}
+
+/* Interactive Impact Matrix Nodes */
+.matrix-node {
+  transition: all 0.3s ease;
+  border: 1px solid var(--color-charcoal-border);
+}
+
+.matrix-node:hover {
+  border-color: var(--color-copper-base);
+  transform: translateY(-2px);
+}
+
+.matrix-node.active-matrix {
+  border-color: var(--color-copper-base);
+  background-color: var(--color-charcoal-surface);
+  box-shadow: 0 0 0 1px var(--color-copper-base);
+}
+
+/* Roadmap Step Interactive Tabs */
+.roadmap-step {
+  transition: all 0.3s ease;
+}
+
+.roadmap-step.active-step {
+  border-left-color: var(--color-copper-base) !important;
+  background-color: rgba(200, 96, 52, 0.06);
+}
+
+.roadmap-step.active-step .step-num {
+  background-color: var(--color-copper-base);
+  color: #ffffff;
+}
+
+/* Sector Accordion / Detail drawer */
+.sector-card {
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.sector-card:hover {
+  border-color: rgba(200, 96, 52, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Subtle pulse badge */
+@keyframes subtlePulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.pulse-indicator {
+  animation: subtlePulse 2.5s infinite ease-in-out;
+}
+
+/* Back to Top floating button */
+#backToTopBtn {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  transform: translateY(16px);
+}
+
+#backToTopBtn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Mobile drawer transition */
+#mobileMenu {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+
+#mobileMenu.open {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#mobileMenu.closed {
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+}

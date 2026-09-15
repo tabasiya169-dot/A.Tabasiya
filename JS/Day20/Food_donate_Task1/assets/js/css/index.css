@@ -1,0 +1,438 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8faf7;
+    color: #26352c;
+}
+
+section {
+    scroll-margin-top: 75px;
+}
+
+/* NAVBAR */
+
+.navbar {
+    background: #173b2b;
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 26px;
+    color: #f5d98b !important;
+}
+
+.nav-link {
+    color: rgb(15, 8, 8) !important;
+    margin-left: 12px;
+}
+
+.nav-link:hover {
+    color: #f5d98b !important;
+}
+
+
+/* HERO */
+
+.hero-section {
+    min-height: 100vh;
+    padding: 140px 0 80px;
+    background: linear-gradient(135deg, #eef7ef, #fff9e8);
+}
+
+.hero-tag {
+    color: #9b7220;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero-section h1 {
+    font-size: 55px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+.hero-section h1 span {
+    color: #26734d;
+}
+
+.hero-section p {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 550px;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+}
+
+.main-btn {
+    background: #26734d;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+}
+
+.main-btn:hover {
+    background: #173b2b;
+    color: white;
+}
+
+.outline-btn {
+    border: 2px solid #26734d;
+    color: #26734d;
+    padding: 10px 25px;
+    border-radius: 30px;
+    margin-left: 10px;
+}
+
+.outline-btn:hover {
+    background: #26734d;
+    color: white;
+}
+
+.hero-image-box {
+    padding: 15px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.hero-image-box img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 22px;
+}
+
+
+/* STATS */
+
+.stats-section {
+    padding: 40px 0;
+    background: #173b2b;
+}
+
+.stat-card {
+    color: white;
+}
+
+.stat-card h2 {
+    color: #f5d98b;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.stat-card p {
+    margin: 0;
+}
+
+
+/* COMMON SECTION */
+
+.section-padding {
+    padding: 90px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading span {
+    color: #a47b24;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: 40px;
+    margin: 12px 0;
+    font-weight: 700;
+}
+
+.section-heading p {
+    color: #68756d;
+}
+
+
+/* ABOUT */
+
+.info-card {
+    background: white;
+    padding: 35px;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-7px);
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.info-card h4 {
+    color: #26734d;
+}
+
+.info-card p {
+    color: #68756d;
+    line-height: 1.7;
+}
+
+.article-box {
+    margin-top: 50px;
+    background: #eaf4ec;
+    padding: 40px;
+    border-radius: 25px;
+}
+
+.article-box h3 {
+    color: #173b2b;
+    margin-bottom: 20px;
+}
+
+.article-box p {
+    line-height: 1.8;
+}
+
+.mini-point {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #26734d;
+}
+
+
+/* DONATE */
+
+.donate-section {
+    background: #f1f6ef;
+}
+
+.form-box {
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    max-width: 900px;
+    margin: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.form-box label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-control,
+.form-select {
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #26734d;
+    box-shadow: none;
+}
+
+#donationMessage {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+/* AVAILABLE FOOD */
+
+.search-box {
+    max-width: 650px;
+    margin: auto;
+}
+
+.food-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 100%;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    transition: 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-6px);
+}
+
+.food-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.food-content {
+    padding: 22px;
+}
+
+.food-content h4 {
+    color: #26734d;
+}
+
+.food-content p {
+    margin-bottom: 7px;
+    color: #68756d;
+}
+
+.food-badge {
+    display: inline-block;
+    background: #eaf4ec;
+    color: #26734d;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.request-btn {
+    border: none;
+    background: #173b2b;
+    color: white;
+    padding: 9px 18px;
+    border-radius: 20px;
+}
+
+
+/* API */
+
+.insights-section {
+    background: #fff9e8;
+}
+
+.api-search {
+    max-width: 650px;
+    margin: auto;
+}
+
+.api-card {
+    background: white;
+    min-height: 180px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.06);
+}
+
+.api-card h4 {
+    color: #26734d;
+    margin-bottom: 15px;
+}
+
+.api-card p {
+    margin-bottom: 7px;
+}
+
+
+/* DASHBOARD */
+
+.dashboard-stat {
+    background: #173b2b;
+    color: white;
+    padding: 25px;
+    border-radius: 18px;
+}
+
+.dashboard-stat span {
+    font-size: 14px;
+}
+
+.dashboard-stat h3 {
+    color: #f5d98b;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.dashboard-table {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.table thead {
+    background: #173b2b;
+    color: white;
+}
+
+.table th,
+.table td {
+    padding: 15px;
+    vertical-align: middle;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #10291e;
+    color: white;
+    padding: 40px 0;
+}
+
+footer h4 {
+    color: #f5d98b;
+}
+
+footer p {
+    color: #d4ddd7;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .hero-section h1 {
+        font-size: 40px;
+    }
+
+    .hero-image-box {
+        margin-top: 40px;
+    }
+
+    .hero-image-box img {
+        height: 350px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .outline-btn {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .form-box {
+        padding: 25px;
+    }
+}

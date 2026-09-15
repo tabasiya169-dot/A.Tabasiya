@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid black;
+        }
+
+        input {
+            width: 90%;
+            padding: 8px;
+            margin: 8px 0;
+        }
+
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+
+        .student {
+            margin-top: 15px;
+            padding: 15px;
+            width: 300px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Student Details</h2>
+
+    <form>
+        <label>Name:</label>
+        <input type="text" id="name" placeholder="Enter the name">
+
+        <label>Age:</label>
+        <input type="number" id="age" placeholder="Enter the age">
+
+        <label>City:</label>
+        <input type="text" id="city" placeholder="Enter the city">
+
+        <button type="button" onclick="addStudent()">Add Student</button>
+    </form>
+
+    <div id="studentContainer"></div>
+
+    <script src="assets/js/index.js"></script>
+
+</body>
+</html>

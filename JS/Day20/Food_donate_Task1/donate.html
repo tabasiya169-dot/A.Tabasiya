@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Donate surplus cooked food on the Leftover Food Donation Platform. Easy, fast, safe community meal sharing.">
+  <title>Donate Surplus Food | Leftover Food Donation Platform</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+  <!-- Navigation Bar -->
+  <header class="navbar-custom">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="brand-logo">
+          <div class="brand-icon-box">
+            <i class="bi bi-heart-fill"></i>
+          </div>
+          <div>
+            <div class="brand-title">FoodBridge</div>
+            <div class="brand-subtitle">Leftover Food Donation</div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
+          <a href="index.html" class="nav-link-custom">
+            <i class="bi bi-house-door"></i> Home
+          </a>
+          <a href="about.html" class="nav-link-custom">
+            <i class="bi bi-info-circle"></i> About
+          </a>
+          <a href="donate.html" class="nav-link-custom active">
+            <i class="bi bi-plus-circle"></i> Donate Food
+          </a>
+          <a href="available.html" class="nav-link-custom">
+            <i class="bi bi-box-seam"></i> Available Food
+          </a>
+          <a href="food-info.html" class="nav-link-custom">
+            <i class="bi bi-journal-text"></i> Food Information
+          </a>
+          <a href="dashboard.html" class="nav-link-custom">
+            <i class="bi bi-grid-1x2"></i> Dashboard
+          </a>
+        </nav>
+
+        <!-- Right Header Action -->
+        <div class="hidden lg:flex items-center gap-3">
+          <a href="available.html" class="btn-secondary-custom text-sm">
+            <i class="bi bi-search"></i> View Listings
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex md:hidden">
+          <button id="mobile-menu-toggle" type="button" class="p-2 rounded-lg text-slate-600 hover:text-emerald-600 hover:bg-slate-100 focus:outline-none">
+            <i class="bi bi-list text-2xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-1">
+      <a href="index.html" class="block nav-link-custom">
+        <i class="bi bi-house-door"></i> Home
+      </a>
+      <a href="about.html" class="block nav-link-custom">
+        <i class="bi bi-info-circle"></i> About
+      </a>
+      <a href="donate.html" class="block nav-link-custom active">
+        <i class="bi bi-plus-circle"></i> Donate Food
+      </a>
+      <a href="available.html" class="block nav-link-custom">
+        <i class="bi bi-box-seam"></i> Available Food
+      </a>
+      <a href="food-info.html" class="block nav-link-custom">
+        <i class="bi bi-journal-text"></i> Food Information
+      </a>
+      <a href="dashboard.html" class="block nav-link-custom">
+        <i class="bi bi-grid-1x2"></i> Dashboard
+      </a>
+    </div>
+  </header>
+
+  <!-- Page Header Banner -->
+  <section class="hero-gradient-bg py-12 border-b border-emerald-100/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+      <div class="hero-badge">
+        <i class="bi bi-box2-heart text-emerald-600"></i>
+        <span>Share Surplus Food In Under 2 Minutes</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-2">
+        Donate Safe Leftover Food
+      </h1>
+      <p class="text-sm sm:text-base text-slate-600">
+        Fill out this simple form to list surplus cooked meals, bakery products, or fresh fruits. Nearby volunteers and shelters will be notified for instant pickup.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Donation Section -->
+  <section class="py-12 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Submission Feedback Alert Container (Dynamic) -->
+      <div id="form-alert-container" class="mb-8 hidden"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Donation Form (8 cols) -->
+        <div class="lg:col-span-8">
+          <div class="form-card">
+            
+            <div class="flex items-center justify-between pb-6 mb-6 border-b border-slate-200">
+              <div>
+                <h2 class="text-2xl font-bold text-slate-900">Food Donation Form</h2>
+                <p class="text-xs text-slate-500 mt-1">Please provide accurate food preparation and location details.</p>
+              </div>
+              <span class="badge-custom badge-available">
+                <i class="bi bi-shield-check"></i> Safe Donor Portal
+              </span>
+            </div>
+
+            <form id="donation-form" novalidate>
+              
+              <!-- Section 1: Donor Contact Information -->
+              <div class="mb-8">
+                <h3 class="text-sm font-bold uppercase tracking-wider text-emerald-700 mb-4 flex items-center gap-2">
+                  <i class="bi bi-person-lines-fill"></i> 1. Donor Contact Information
+                </h3>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <!-- Donor Name -->
+                  <div>
+                    <label for="donorName" class="form-label-custom">
+                      Donor Name <span class="text-rose-500">*</span>
+                    </label>
+                    <input type="text" id="donorName" name="donorName" class="form-control-custom" placeholder="e.g. John Doe / Green Bistro" required>
+                    <div id="err-donorName" class="form-feedback error hidden"></div>
+                  </div>
+
+                  <!-- Email Address -->
+                  <div>
+                    <label for="email" class="form-label-custom">
+                      Email Address <span class="text-rose-500">*</span>
+                    </label>
+                    <input type="email" id="email" name="email" class="form-control-custom" placeholder="name@example.com" required>
+                    <div id="err-email" class="form-feedback error hidden"></div>
+                  </div>
+
+                  <!-- Phone Number -->
+                  <div>
+                    <label for="phone" class="form-label-custom">
+                      Phone Number <span class="text-rose-500">*</span>
+                    </label>
+                    <input type="tel" id="phone" name="phone" class="form-control-custom" placeholder="+91 98765 43210" required>
+                    <div id="err-phone" class="form-feedback error hidden"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Section 2: Food Item Details -->
+              <div class="mb-8">
+                <h3 class="text-sm font-bold uppercase tracking-wider text-emerald-700 mb-4 flex items-center gap-2">
+                  <i class="bi bi-cup-hot-fill"></i> 2. Food & Meal Details
+                </h3>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                  <!-- Food Name -->
+                  <div>
+                    <label for="foodName" class="form-label-custom">
+                      Food Item Name <span class="text-rose-500">*</span>
+                    </label>
+                    <input type="text" id="foodName" name="foodName" class="form-control-custom" placeholder="e.g. Veg Biryani, Chapatis, Dal" required>
+                    <div id="err-foodName" class="form-feedback error hidden"></div>
+                  </div>
+
+                  <!-- Food Category -->
+                  <div>
+                    <label for="category" class="form-label-custom">
+                      Food Category <span class="text-rose-500">*</span>
+                    </label>
+                    <select id="category" name="category" class="form-control-custom" required>
+                      <option value="">-- Select Food Category --</option>
+                      <option value="Cooked Meals">Cooked Meals (Rice, Curry, Pasta, etc.)</option>
+                      <option value="Bakery">Bakery & Breads (Chapati, Roti, Buns)</option>
+                      <option value="Fresh Produce">Fresh Produce (Vegetables & Fruits)</option>
+                      <option value="Grains & Cereals">Grains & Cereals</option>
+                      <option value="Packaged Foods">Packaged / Canned Foods</option>
+                    </select>
+                    <div id="err-category" class="form-feedback error hidden"></div>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <!-- Quantity & Unit -->
+                  <div>
+                    <label for="quantity" class="form-label-custom">
+                      Quantity <span class="text-rose-500">*</span>
+                    </label>
+                    <div class="flex gap-2">
+                      <input type="number" id="quantity" name="quantity" min="1" step="1" class="form-control-custom w-1/2" placeholder="e.g. 10" required>
+                      <select id="quantityUnit" name="quantityUnit" class="form-control-custom w-1/2">
+                        <option value="Servings">Servings</option>
+                        <option value="Kg">Kg</option>
+                        <option value="Portions">Portions</option>
+                        <option value="Pieces / Packs">Pieces / Packs</option>
+                      </select>
+                    </div>
+                    <div id="err-quantity" class="form-feedback error hidden"></div>
+                  </div>
+
+                  <!-- Dietary / Food Type -->
+                  <div>
+                    <label for="foodType" class="form-label-custom">
+                      Dietary Type <span class="text-rose-500">*</span>
+                    </label>
+                    <select id="foodType" name="foodType" class="form-control-custom">
+                      <option value="Vegetarian">Vegetarian (100% Veg)</option>
+                      <option value="Vegan">Vegan (Plant-based)</option>
+                      <option value="Non-Vegetarian">Non-Vegetarian</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Section 3: Time & Expiry Schedule -->
+              <div class="mb-8">
+                <h3 class="text-sm font-bold uppercase tracking-wider text-emerald-700 mb-4 flex items-center gap-2">
+                  <i class="bi bi-clock-history"></i> 3. Timestamps & Safe Consumption Window
+                </h3>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <!-- Prepared Date & Time -->
+                  <div>
+                    <label for="preparedDate" class="form-label-custom">
+                      Prepared Date & Time <span class="text-rose-500">*</span>
+                    </label>
+                    <input type="datetime-local" id="preparedDate" name="preparedDate" class="form-control-custom" required>
+                    <div id="err-preparedDate" class="form-feedback error hidden"></div>
+                  </div>
+
+                  <!-- Expiry / Safe Window -->
+                  <div>
+                    <label for="expiryDate" class="form-label-custom">
+                      Best Before / Safe Expiry
+                    </label>
+                    <select id="expiryDate" name="expiryDate" class="form-control-custom">
+                      <option value="Safe within 3 hours">Safe within 3 hours (Urgent)</option>
+                      <option value="Safe within 6 hours" selected>Safe within 6 hours (Standard cooked)</option>
+                      <option value="Safe within 12 hours">Safe within 12 hours (Refrigerated)</option>
+                      <option value="Safe for 24-48 hours">Safe for 24-48 hours (Bakery / Produce)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Section 4: Location & Packaging Advice -->
+              <div class="mb-8">
+                <h3 class="text-sm font-bold uppercase tracking-wider text-emerald-700 mb-4 flex items-center gap-2">
+                  <i class="bi bi-geo-alt-fill"></i> 4. Pickup Location & Instructions
+                </h3>
+
+                <div class="mb-4">
+                  <label for="pickupLocation" class="form-label-custom">
+                    Exact Pickup Address / Landmark <span class="text-rose-500">*</span>
+                  </label>
+                  <input type="text" id="pickupLocation" name="pickupLocation" class="form-control-custom" placeholder="e.g. 142 Green Park Avenue, Near Metro Gate 3" required>
+                  <div id="err-pickupLocation" class="form-feedback error hidden"></div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <!-- Custom Image URL (Optional) -->
+                  <div>
+                    <label for="imageUrl" class="form-label-custom">
+                      Custom Food Image URL (Optional)
+                    </label>
+                    <input type="url" id="imageUrl" name="imageUrl" class="form-control-custom" placeholder="https://images.unsplash.com/...">
+                    <div class="text-[11px] text-slate-400 mt-1">Leave empty to use automatic high-res category photo.</div>
+                  </div>
+
+                  <!-- Packaging & Allergen Description -->
+                  <div>
+                    <label for="description" class="form-label-custom">
+                      Packaging & Handling Notes
+                    </label>
+                    <textarea id="description" name="description" rows="2" class="form-control-custom" placeholder="e.g. Hot and packed in 5 sealed foil boxes. Contains dairy."></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Form Buttons -->
+              <div class="pt-6 border-t border-slate-200 flex flex-wrap items-center justify-between gap-4">
+                <button type="button" id="btn-clear-form" class="btn-secondary-custom">
+                  <i class="bi bi-arrow-counterclockwise"></i> Clear Form
+                </button>
+                <button type="submit" id="btn-submit-donation" class="btn-primary-custom px-8 py-3">
+                  <i class="bi bi-check2-circle text-lg"></i> Complete & Post Donation
+                </button>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+
+        <!-- Right: Live Preview Card (4 cols) -->
+        <div class="lg:col-span-4 sticky top-28 space-y-6">
+          <div class="bg-white border border-slate-200 rounded-3xl p-6 shadow-md">
+            
+            <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Live Listing Preview</span>
+              <span class="badge-custom badge-available">Preview Mode</span>
+            </div>
+
+            <!-- Preview Card Element -->
+            <div class="food-card border border-slate-200 shadow-sm">
+              <div class="food-card-img-container">
+                <img id="preview-img" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="Preview" class="food-card-img">
+                <div class="food-badge-top-left">
+                  <span class="badge-custom badge-available">Available</span>
+                </div>
+                <div class="food-badge-top-right">
+                  <span id="preview-type-badge" class="badge-custom badge-veg">Vegetarian</span>
+                </div>
+              </div>
+              <div class="food-card-body">
+                <div class="flex items-center justify-between text-xs text-slate-500 font-semibold mb-1">
+                  <span id="preview-category"><i class="bi bi-tag-fill text-emerald-600 mr-1"></i>Cooked Meals</span>
+                  <span id="preview-qty"><i class="bi bi-pie-chart-fill text-amber-500 mr-1"></i>10 Servings</span>
+                </div>
+                <h3 id="preview-food-name" class="text-base font-bold text-slate-900 mb-1">Your Food Name</h3>
+                <p id="preview-desc" class="text-xs text-slate-500 line-clamp-2 mb-3">Safe leftover food packed with care.</p>
+                <div class="bg-slate-50 rounded-lg p-2.5 space-y-1 text-xs text-slate-600">
+                  <div class="flex items-center gap-2">
+                    <i class="bi bi-person text-slate-400"></i>
+                    <span id="preview-donor" class="font-medium">Donor Name</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="bi bi-geo-alt-fill text-rose-500"></i>
+                    <span id="preview-location" class="truncate">Pickup Location</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Safety Reminder Box -->
+            <div class="mt-4 bg-emerald-50 rounded-xl p-3 border border-emerald-100 text-xs text-emerald-800 space-y-1">
+              <div class="font-bold flex items-center gap-1.5">
+                <i class="bi bi-info-circle-fill text-emerald-600"></i> Instant Visibility
+              </div>
+              <p>Once submitted, this donation will instantly appear in the <strong>Available Food</strong> marketplace and the live <strong>Dashboard</strong>.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Recently Added by User Section (DOM Manipulation) -->
+      <div class="mt-16 pt-12 border-t border-slate-200">
+        <div class="flex items-center justify-between mb-6">
+          <div>
+            <h3 class="text-2xl font-bold text-slate-900">Your Active Food Donations</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Real-time donations stored in your local session.</p>
+          </div>
+          <a href="available.html" class="btn-secondary-custom text-xs">
+            Browse All Marketplace <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+        <div id="recent-donations-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Injected dynamically via js/donate.js -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-custom py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="brand-icon-box" style="width: 36px; height: 36px; font-size: 18px;">
+              <i class="bi bi-heart-fill"></i>
+            </div>
+            <span class="text-white font-extrabold text-lg">FoodBridge</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            A front-end platform bridging surplus cooked food with people who need it. Committed to Zero Waste and Zero Hunger.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Mission</a></li>
+            <li><a href="donate.html" class="footer-link">Donate Food</a></li>
+            <li><a href="available.html" class="footer-link">Available Listings</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Resources & APIs</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="food-info.html" class="footer-link">Nutrition & Recipe Dashboard</a></li>
+            <li><a href="dashboard.html" class="footer-link">Community Stats & Weather</a></li>
+            <li><a href="about.html#safety-rules" class="footer-link">Food Safety Handbook</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Helpline & Support</h4>
+          <p class="text-xs text-slate-400 mb-3">Volunteers ready 24/7 for urgent surplus pickups.</p>
+          <div class="text-emerald-400 font-bold text-sm">
+            <i class="bi bi-telephone-fill mr-1"></i> 1800-FOOD-BRIDGE
+          </div>
+          <div class="text-slate-400 text-xs mt-1">support@foodbridge-community.org</div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>© 2026 Leftover Food Donation Platform. Built with Vanilla JS, HTML5, CSS3, Bootstrap & Tailwind CSS.</div>
+        <div class="flex gap-4">
+          <a href="about.html" class="footer-link">Privacy</a>
+          <a href="about.html" class="footer-link">Terms</a>
+          <a href="dashboard.html" class="footer-link">System Status</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/common.js"></script>
+  <script src="js/donate.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+a {
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.active {
+  color: blue;
+  font-weight: bold;
+}
